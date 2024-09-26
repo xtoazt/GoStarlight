@@ -1,0 +1,14 @@
+{
+    "name": "Starlight",
+    "short_name": "Starlight",
+    "start_url": "/",
+    "display": "standalone",
+    "icons": [
+      {
+        "src": " ",
+        "sizes": "192x192",
+        "type": "/img/starlight.png"
+      }
+    ]
+  }
+  

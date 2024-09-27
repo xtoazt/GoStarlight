@@ -1,9 +1,122 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(180deg, #26002e, #7612af);
-    color: white;
     overflow: hidden;
+    background-color: #171717; /* Dark background */
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff; /* White text color */
+    opacity: 0; /* Start with invisible text */
+    animation: fadeIn 3s forwards; /* Fade-in animation for the page */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* End fully opaque */
+    }
+}
+
+.text {
+    font-size: 3em; /* Large font size for the welcome message */
+    opacity: 0; /* Start with invisible text */
+    animation: textFadeIn 3s forwards; /* Fade-in animation for text */
+    z-index: 2; /* Ensure text is above the particles */
+    position: relative; /* Position relative to the navbar */
+    margin-top: 100px; /* Space below the navbar */
+    text-align: center; /* Center the text */
+}
+
+@keyframes textFadeIn {
+    to {
+        opacity: 1; /* End fully opaque */
+    }
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 0; /* Ensure particles are behind everything */
+}
+
+nav {
+    position: fixed; /* Fix the navbar at the top */
+    top: 20px; /* Add some space from the top */
+    left: 50%; /* Center the navbar horizontally */
+    transform: translateX(-50%); /* Offset the navbar by 50% of its own width */
+    width: 80%; /* Set the width to 80% of the screen */
+    padding: 20px; /* Padding for the navbar */
+    background-color: rgba(23, 23, 23, 0.8); /* Semi-transparent background */
+    color: white; /* Text color */
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for lift effect and shadow */
+    z-index:1; /* Ensure navbar is above the particles */
+    border-radius: 20px; /* Add rounded corners */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Center items vertically */
+}
+
+nav:hover {
+    transform: translateX(-50%) translateY(-5px); /* Lift effect */
+    box-shadow: 0px 12px 36px rgba(0, 0, 0, 0.5); /* Slightly increase shadow on lift */
+}
+
+.left-link {
+    color: white;
+    text-decoration: none;
+    font-size: 20px; /* Font size for the left link */
+}
+
+.nav-links {
+    display: flex; /* Flexbox for horizontal alignment */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px; /* Space between right links */
+    padding: 10px 15px;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Hover effect */
+}
+
+.game-features-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent line breaks */
+    padding: 10px 0; /* Padding for aesthetics */
+    border: 2px solid #444; /* Optional border */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.game-features {
+    display: inline-block; /* Keep items in a row */
+}
+
+.game-feature {
+    display: inline-block; /* Keep each game in a row */
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    margin-right: 10px; /* Space between items */
+    min-width: 150px; /* Minimum width for each item */
+    text-align: center; /* Center text */
+}
+
+/* Optional styling for scrollbars */
+.game-features-container::-webkit-scrollbar {
+    height: 8px; /* Height of the scrollbar */
+}
+
+.game-features-container::-webkit-scrollbar-thumb {
+    background: #555; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded scrollbar thumb */
+}
+
+.game-features-container::-webkit-scrollbar-track {
+    background: #333; /* Background of the scrollbar track */
 }

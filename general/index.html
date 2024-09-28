@@ -25,29 +25,125 @@
     <body>
         <div id="particles-js"></div>
         <nav>
-            <a href="home.html" class="left-link"><img src="/img/image__3_-removebg-preview.png" height="50px" width="50px" ></a>
+            <a href="home.html" class="left-link">Starlight</a>
             <div class="nav-links">
-                <a href="about.html">Arcade</a>
-                <a href="services.html">Utilities</a>
-                <a href="contact.html">Media</a>
-                <a href="extra.html">Extra</a>
+                <a href="about.html"><img src="/img/arcade.png" height="15px" width="15px">&nbsp;Arcade</a>
+                <a href="services.html"><img src="/img/apps.png" height="15px" width="15px">&nbsp;Utilities</a>
+                <a href="contact.html"><img src="/img/movies.png" height="15px" width="15px">&nbsp;Media</a>
+                <a href="extra.html"><img src="/img/settings.png" height="15px" width="15px">&nbsp;Settings</a>
             </div>
         </nav>
         <br>
         <br>
-        <div class="text">Welcome to Starlight</div>
         <br>
-        <div class="game-features-container">
-            <div class="game-features">
-                <div class="game-feature">Game 1</div>
-                <div class="game-feature">Game 2</div>
-                <div class="game-feature">Game 3</div>
-                <div class="game-feature">Game 4</div>
-                <div class="game-feature">Game 5</div>
-                <div class="game-feature">Game 6</div>
-                <div class="game-feature">Game 7</div>
-                <div class="game-feature">Game 8</div>
+        <div class="text">Welcome to Starlight</div>
+        <div id="splash">UNKNOWN</div>
+        <br>
+        <center>
+            <form id="uv-form">
+              <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/> 
+              <input id="uv-address" type="text" placeholder="Search the web" class="form__input"/>
+            </form>
+            <div class="desc left-margin">
+              <p id="uv-error"></p>
+              <pre id="uv-error-code"></pre>
             </div>
-        </div>
+          </center>
+          <center>
+            <a href="https://discord.gg/WSUy3dHFRh"> <a>
+            <a href="https://github.com/enterheadlines/entertopia"> </a>
+            <a href="profile.html"> </a>
+          </center>
+
+<script src="/static/uv/uv.bundle.js" defer></script>
+<script src="/static/uv/uv.config.js" defer></script>
+<script src="/static/register-sw.js" defer></script>
+<script src="/static/search.js" defer></script>
+<script src="/static/index.js" defer></script>
+<script src="/static/error.js" defer></script>
     </body>
 </html>
+    <!-- Include Particle.js library -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: {
+                    value: 200, // Number of particles
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: "#ffffff" // White particles to represent stars
+                },
+                shape: {
+                    type: "circle", // Circular particles
+                    stroke: {
+                        width: 0,
+                        color: "#000000"
+                    },
+                },
+                opacity: {
+                    value: 0.7, // Base opacity for brightness
+                    random: true, // Random opacity for blinking effect
+                    anim: {
+                        enable: false,
+                    }
+                },
+                size: {
+                    value: 3, // Size of particles
+                    random: true,
+                    anim: {
+                        enable: false,
+                    }
+                },
+                line_linked: {
+                    enable: false, // Disable connecting lines
+                },
+                move: {
+                    enable: true,
+                    speed: 5, // Slower speed for a more realistic flying effect
+                    direction: "none", // Particle movement direction
+                    random: true, // Random movement for a more dynamic effect
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false,
+                    attract: {
+                        enable: false,
+                    }
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: false, // Disable hover effect
+                    },
+                    onclick: {
+                        enable: false, // Disable click effect
+                    },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+    <script>
+        let splashtext = [
+      'Made by Infamy/enterheadlines',
+       'Join our discord fr'
+     ]
+     
+     document.getElementById('splash').innerText = splashtext[Math.floor(Math.random() * splashtext.length)]
+     </script>
+     <script>
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+          e.preventDefault();
+          deferredPrompt = e;
+          // Show your custom install button
+        });
+        
+        </script>

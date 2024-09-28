@@ -1,10 +1,58 @@
 
-Redirecting...
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Screen</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            margin: 0;
+            background-color: #121212; /* Dark background */
+            color: #ffffff; /* White text */
+            font-family: Arial, sans-serif;
+        }
+
+        .loading-container {
+            position: relative; /* Position relative for absolute positioning of text */
+            text-align: center;
+        }
+
+        /* Spinner styles */
+        .spinner {
+            border: 8px solid #f3f3f3; /* Light gray border */
+            border-top: 8px solid #464646; /* Bright green top */
+            border-radius: 50%; /* Circular shape */
+            width: 60px; /* Spinner width */
+            height: 60px; /* Spinner height */
+            animation: spin 1s linear infinite; /* Spin animation */
+            margin-bottom: 20px; /* Space between spinner and text */
+        }
+
+        /* Keyframes for spinner animation */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+  
+    </style>
+</head>
+<body>
+    <div class="loading-container">
+        <div class="spinner"></div>
+    </div>
+</body>
+</html>
 
 <script>
     // Redirect to index.html after a short delay
 setTimeout(function() {
     window.location.href = '/general/index.html';
-}, 2000); // Redirects after 1 second
+}, 200); // Redirects after 1 second
 
 </script>

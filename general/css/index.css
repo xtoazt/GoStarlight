@@ -293,3 +293,49 @@ option{
 	border: none;
 	font-family: 'Montserrat', sans-serif;
 }
+.partner:hover {
+    transform: scale(1.05);
+}
+
+.partner a {
+    text-decoration: none;
+    color: #35424a;
+}
+
+.partner img {
+    width: 100%; /* Make images responsive */
+    border-radius: 5px;
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+.main {
+    padding: 20px;
+}
+
+.partners {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    background-image: url('your-background-image-url.jpg'); /* Replace with your background image URL */
+    background-size: cover;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.partner {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 200px; /* Fixed width for horizontal layout */
+    transition: transform 0.3s;
+    opacity: 0;
+    animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}

@@ -11,8 +11,8 @@ function searchGames() {
 
     for (let i = 0; i < gameCards.length; i++) {
         const gameCard = gameCards[i];
-        const title = gameCard.getElementsByTagName('p')[0].innerText.toLowerCase();
-        const description = gameCard.getElementsByTagName('p')[0].innerText.toLowerCase();
+        const title = gameCard.getElementsByTagName('h2')[0].innerText.toLowerCase();
+        const description = gameCard.getElementsByTagName('h2')[0].innerText.toLowerCase();
 
         if (title.includes(input) || description.includes(input)) {
             gameCard.style.display = '';

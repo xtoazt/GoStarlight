@@ -299,7 +299,7 @@ option{
 
 .partner a {
     text-decoration: none;
-    color: #35424a;
+    color: #ffffff;
 }
 
 .partner img {
@@ -317,14 +317,13 @@ option{
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-    background-image: url('your-background-image-url.jpg'); /* Replace with your background image URL */
     background-size: cover;
     padding: 20px;
     border-radius: 8px;
 }
 
 .partner {
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    background: rgba(44, 44, 44, 0.8); /* Semi-transparent white */
     margin: 10px;
     padding: 20px;
     border-radius: 8px;

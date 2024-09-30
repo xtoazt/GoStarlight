@@ -411,3 +411,42 @@ option{
 #download-button:hover, #load-button:hover {
     background-color: #606060;
 }
+
+.chat-container {
+    background-color: #1e1e1e; /* Darker chat background */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    width: 100; /* Fixed width for the chatbox */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    padding: 20px; /* Padding inside the chat container */
+}
+#chat-box {
+    border: 1px solid #444; /* Darker border */
+    height: 400px;
+    overflow-y: scroll;
+    padding: 10px;
+    flex-grow: 1; /* Allow chat box to grow */
+    border-radius: 8px; /* Rounded corners for chat box */
+}
+#user-input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #444; /* Dark border */
+    background-color: #333; /* Input background */
+    color: #ffffff; /* Input text color */
+    border-radius: 4px; /* Rounded corners */
+    margin: 10px 0; /* Margin for spacing */
+}
+#send-button {
+    width: 18%;
+    padding: 10px;
+    border: none;
+    background-color: #444; /* Button color */
+    color: #ffffff; /* Button text color */
+    cursor: pointer;
+    border-radius: 4px; /* Rounded corners */
+}
+#send-button:hover {
+    background-color: #0056b3; /* Darker button on hover */
+}

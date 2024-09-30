@@ -430,6 +430,7 @@ option{
     border-radius: 8px; /* Rounded corners for chat box */
 }
 #user-input {
+    outline: none;
     width: 80%;
     padding: 10px;
     border: 1px solid #444; /* Dark border */

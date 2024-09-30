@@ -332,7 +332,7 @@ option{
 }
 
 .chat-container {
-    width: 100; /* Fixed width for the chatbox */
+    width: 600px; /* Fixed width for the chatbox */
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     padding: 20px; /* Padding inside the chat container */
@@ -347,7 +347,7 @@ option{
 }
 #user-input {
     outline: none;
-    width: 100%;
+    width: 600px;
     padding: 10px;
     border: 1px solid #444; /* Dark border */
     background-color: #333; /* Input background */
@@ -355,17 +355,10 @@ option{
     border-radius: 4px; /* Rounded corners */
     margin: 10px 0; /* Margin for spacing */
 }
-#send-button {
-    width: 18%;
-    padding: 10px;
-    border: none;
-    background-color: #444; /* Button color */
-    color: #ffffff; /* Button text color */
-    cursor: pointer;
-    border-radius: 4px; /* Rounded corners */
-}
+
 .text {
    text-align: center;
+   transition: transform 0.3s;
  }
  
  .text:hover {

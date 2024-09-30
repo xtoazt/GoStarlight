@@ -332,9 +332,6 @@ option{
 }
 
 .chat-container {
-    background-color: #1e1e1e; /* Darker chat background */
-    border-radius: 12px; /* Rounded corners */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
     width: 100; /* Fixed width for the chatbox */
     display: flex;
     flex-direction: column; /* Stack elements vertically */
@@ -342,7 +339,7 @@ option{
 }
 #chat-box {
     border: 1px solid #444; /* Darker border */
-    height: 400px;
+    height: 300px;
     overflow-y: scroll;
     padding: 10px;
     flex-grow: 1; /* Allow chat box to grow */
@@ -350,7 +347,7 @@ option{
 }
 #user-input {
     outline: none;
-    width: 80%;
+    width: 100%;
     padding: 10px;
     border: 1px solid #444; /* Dark border */
     background-color: #333; /* Input background */
@@ -367,6 +364,11 @@ option{
     cursor: pointer;
     border-radius: 4px; /* Rounded corners */
 }
-#send-button:hover {
-    background-color: #0056b3; /* Darker button on hover */
-}
+.text {
+   text-align: center;
+ }
+ 
+ .text:hover {
+    transform: translateY(-5%) scale(1.03);
+    font-weight: 800;
+ }

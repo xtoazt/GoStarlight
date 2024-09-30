@@ -325,6 +325,7 @@ option{
 .partner {
     background: rgba(44, 44, 44, 0.8); /* Semi-transparent white */
     margin: 10px;
+    height: 700px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);

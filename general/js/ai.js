@@ -1,5 +1,6 @@
 const chatBox = document.getElementById('chat-box');
 const userInput = document.getElementById('user-input');
+const sendButton = document.getElementById('send-button');
 
 const apiKey = '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';
 

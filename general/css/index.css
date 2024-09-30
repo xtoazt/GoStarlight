@@ -1,6 +1,6 @@
 body {
     margin: 0;
- 
+ overflow: hidden;
     background-color: #171717; /* Dark background */
     height: 100vh;
     font-family: 'Arial', sans-serif;
@@ -332,7 +332,8 @@ option{
 }
 
 .chat-container {
-    width: 600px; /* Fixed width for the chatbox */
+    margin-left: 20%;
+    width: 80%; /* Fixed width for the chatbox */
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     padding: 20px; /* Padding inside the chat container */
@@ -347,7 +348,7 @@ option{
 }
 #user-input {
     outline: none;
-    width: 600px;
+    width: 60%;
     padding: 10px;
     border: 1px solid #444; /* Dark border */
     background-color: #333; /* Input background */
@@ -355,7 +356,15 @@ option{
     border-radius: 4px; /* Rounded corners */
     margin: 10px 0; /* Margin for spacing */
 }
-
+#send-button {
+    width: 18%;
+    padding: 10px;
+    border: none;
+    background-color: #444; /* Button color */
+    color: #ffffff; /* Button text color */
+    cursor: pointer;
+    border-radius: 4px; /* Rounded corners */
+}
 .text {
    text-align: center;
    transition: transform 0.3s;
@@ -364,4 +373,14 @@ option{
  .text:hover {
     transform: translateY(-5%) scale(1.03);
     font-weight: 800;
+ }
+ #time{
+    background-color: rgba(20, 19, 19, 0.418);
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.4);
+    width: 130px;
+    font-size: 18px;
+    bottom: 1px;
+    left: 50%;
+    right: 50%;
+    border-radius: 10px;
  }

@@ -332,7 +332,7 @@ option{
 }
 
 .chat-container {
-    margin-left: 30px;
+    margin-left: 15%;
     width: 80%; /* Fixed width for the chatbox */
     display: flex;
     flex-direction: column; /* Stack elements vertically */
@@ -374,22 +374,17 @@ option{
     transform: translateY(-5%) scale(1.03);
     font-weight: 800;
  }
- #time{
-    background-color: rgba(20, 19, 19, 0.418);
-    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.4);
-    width: 130px;
-    font-size: 18px;
-    bottom: 1px;
-    left: 50%;
-    right: 50%;
-    border-radius: 10px;
- }
- #container {
-    background: white;
+
+  #container {
+    background: rgb(61, 61, 61);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 100%; /* Full width */
+  
+    display: flex; /* Enable flexbox in container */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
 }
 
 #header {
@@ -399,6 +394,7 @@ option{
 }
 
 #gameName, #gameUrl {
+    outline: none;
     width: 100%;
     padding: 10px;
     margin: 10px 0; /* Space between inputs */
@@ -410,7 +406,7 @@ option{
 #melt {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #535353;
     color: white;
     border: none;
     border-radius: 4px;
@@ -419,7 +415,7 @@ option{
 }
 
 #melt:hover {
-    background-color: #0056b3;
+    background-color: #424242;
 }
 
 #message {

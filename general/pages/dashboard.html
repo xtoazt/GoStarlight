@@ -30,6 +30,7 @@
                 <a href="/general/pages/arcade.html"><img src="/img/arcade.png" height="13px" width="13px">&nbsp;Arcade</a>
                 <a href="/general/pages/utilities.html"><img src="/img/apps.png" height="13px" width="13px">&nbsp;Utilities</a>
                 <a href="/general/pages/media.html"><img src="/img/movies.png" height="13px" width="13px">&nbsp;Media</a>
+                <a href="/general/pages/ai.html"><img src="/img/ai.png" height="13px" width="13px">&nbsp;AI</a>
                 <a href="/general/pages/settings.html"><img src="/img/settings.png" height="13px" width="13px">&nbsp;Settings</a>
             </div>
         </nav>
@@ -40,7 +41,7 @@
         <br>
         <br>
         <br>
-        <center><h1>Navigation</h1></center>
+        <center><h1>Starlight's Dashboard</h1></center>
         <center> 
             <a href="/general/pages/arcade.html"><button class="button">Arcade</button></a>&nbsp;&nbsp;&nbsp;
             <a href="/general/pages/utilities.html"><button class="button">Utilities</button></a>&nbsp;&nbsp;&nbsp;
@@ -50,31 +51,13 @@
            <br>
            <center> 
             <a href="/general/pages/partnership.html"><button class="button">Partnerships</button></a>&nbsp;&nbsp;&nbsp;
-            <a href=" "><button class="button">Credits</button></a>&nbsp;&nbsp;&nbsp;
-            <a href=" "><button class="button">Terms</button></a>&nbsp;&nbsp;&nbsp;
-            <a href=" "><button class="button">Policy</button></a>&nbsp;&nbsp;&nbsp;
+            <a href="/general/pages/credits.html"><button class="button">Credits</button></a>&nbsp;&nbsp;&nbsp;
+            <a href="/general/pages/terms.html"><button class="button">Terms</button></a>&nbsp;&nbsp;&nbsp;
+            <a href="/general/pages/policy.html"><button class="button">Policy</button></a>&nbsp;&nbsp;&nbsp;
            </center>
         <br>
-        <div id="profile-maker">
-            <h1 id="main-heading">Profile</h1>
-            <div id="profile">
-                <img id="profile-pic" src="/img/defaultprofile.png" alt="Profile Picture">
-                <h2 id="username-display">User123</h2>
-                <p id="bio-display">This is my bio.</p>
-            </div>
-    
-            <input type="text" id="username-input" placeholder="Change Username">
-            <textarea id="bio-input" rows="3" placeholder="Change Bio"></textarea>
-            <input type="file" id="pfp-input" class="file-input" accept="image/*">
-            <button id="update-button" onclick="updateProfile()">Update Profile</button>
-    
-            <div id="data-management">
-                <h2>Profile Data Management</h2>
-                <button id="download-button" onclick="downloadData()">Download Profile Data</button>
-                <input type="file" id="load-input" class="file-input" accept=".json" style="display:none;">
-                <button id="load-button" onclick="loadData()">Load Profile Data</button>
-            </div>
-        </div>
+     <br>
+     
     </body>
 </html>
     <!-- Include Particle.js library -->
@@ -154,4 +137,3 @@
         });
         
         </script>
-        <script src="/general/js/linkmanager.js"></script>

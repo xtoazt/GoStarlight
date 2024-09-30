@@ -340,75 +340,22 @@ option{
     from { transform: translateY(20px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
-.dashboard {
-    max-width: 800px;
-    margin: 20px auto;
+
+#profile-maker {
+    max-width: 600px;
+    margin: 50px auto;
     padding: 20px;
     background: white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
-}
-
-.profile {
-    display: flex;
-    align-items: center;
-}
-
-#profile-pic {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-main {
-    margin-top: 20px;
-}
-
-h2 {
-    margin-bottom: 10px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    background-color: #e0e0e0;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.link-manager {
-    margin-top: 20px;
-}
-
-.link-manager input {
-    width: 70%;
-    padding: 10px;
-    margin-right: 10px;
-}
-
-.link-manager button {
-    padding: 10px;
-}
-       
-
-h1 {
+#main-heading {
     margin-bottom: 20px;
 }
 
-.profile {
+#profile {
     margin-bottom: 20px;
     padding: 20px;
     border: 1px solid #ddd;
@@ -423,7 +370,7 @@ h1 {
     margin-bottom: 10px;
 }
 
-input[type="text"], textarea {
+#username-input, #bio-input, #pfp-input {
     width: 90%;
     padding: 10px;
     margin: 10px 0;
@@ -431,7 +378,7 @@ input[type="text"], textarea {
     border-radius: 4px;
 }
 
-button {
+#update-button {
     padding: 10px 15px;
     background-color: #5cb85c;
     color: white;
@@ -440,10 +387,36 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+#update-button:hover {
     background-color: #4cae4c;
 }
 
 .file-input {
     margin: 10px 0;
+}
+
+#data-management {
+    margin-top: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #fafafa;
+}
+
+#data-management h2 {
+    margin-top: 0;
+}
+
+#download-button, #load-button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#download-button:hover, #load-button:hover {
+    background-color: #0056b3;
 }

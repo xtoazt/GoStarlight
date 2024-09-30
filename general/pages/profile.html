@@ -36,8 +36,9 @@
         <br>
         <br>
         <br>
-        <div class="dashboard">
-            <div class="profile">
+        <div id="profile-maker">
+            <h1 id="main-heading">Profile</h1>
+            <div id="profile">
                 <img id="profile-pic" src="default-profile.png" alt="Profile Picture">
                 <h2 id="username-display">User123</h2>
                 <p id="bio-display">This is my bio.</p>
@@ -46,21 +47,15 @@
             <input type="text" id="username-input" placeholder="Change Username">
             <textarea id="bio-input" rows="3" placeholder="Change Bio"></textarea>
             <input type="file" id="pfp-input" class="file-input" accept="image/*">
-            <button onclick="updateProfile()">Update Profile</button>
+            <button id="update-button" onclick="updateProfile()">Update Profile</button>
     
-            <button onclick="downloadData()">Download Profile Data</button>
-            <input type="file" id="load-input" class="file-input" accept=".json">
-            <button onclick="loadData()">Load Profile Data</button>
-
-    
-            <div class="link-manager">
-                <h2>Link Manager</h2>
-                <input type="text" id="link-input" placeholder="Enter a link">
-                <button onclick="addLink()">Add Link</button>
-                <h3>Saved Links</h3>
-                <ul id="link-list"></ul>
+            <div id="data-management">
+                <h2>Profile Data Management</h2>
+                <button id="download-button" onclick="downloadData()">Download Profile Data</button>
+                <input type="file" id="load-input" class="file-input" accept=".json" style="display:none;">
+                <button id="load-button" onclick="loadData()">Load Profile Data</button>
             </div>
-    </div>
+        </div>
     </body>
 </html>
     <!-- Include Particle.js library -->

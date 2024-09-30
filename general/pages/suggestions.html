@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Starlight - Dasboard</title>
+        <title>Starlight - Suggestions</title>
         <meta name="description" content=" Starlight is your all-in-one platform for utilities, hacks, games, and proxies, designed to enhance your online experience and unlock limitless possibilities!">
         <link rel="icon" href="/img/starlight.png">
         <meta name="keywords" content="starlight, proxy, unblocked, unblock, unblocked games, unblocking, proxies, starlight proxy">
@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="/general/css/index.css">
         <!--js link here-->
         <script src="/general/js/index.js"></script>
+        <script src="/serviceworker.js"></script>
          <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-36EM66LHER"></script>
 <script>
@@ -41,32 +42,16 @@
         <br>
         <br>
         <br>
-        <center><h1>Starlight's Dashboard</h1></center>
-
-        <center> 
-            <a href="/general/pages/arcade.html"><button class="button">Arcade</button></a>&nbsp;&nbsp;&nbsp;
-            <a href="/general/pages/utilities.html"><button class="button">Utilities</button></a>&nbsp;&nbsp;&nbsp;
-            <a href="/general/pages/media.html"><button class="button">Media</button></a>&nbsp;&nbsp;&nbsp;
-            <a href="/general/pages/ai.html"><button class="button">AI</button></a>&nbsp;&nbsp;&nbsp;
-           </center>
-           <br>
-           <center> 
-            <a href="/general/pages/partnership.html"><button class="button">Partnerships</button></a>&nbsp;&nbsp;&nbsp;
-            <a href="/general/pages/credits.html"><button class="button">Credits</button></a>&nbsp;&nbsp;&nbsp;
-            <a href="/general/pages/terms.html"><button class="button">Terms</button></a>&nbsp;&nbsp;&nbsp;
-            <a href="/general/pages/policy.html"><button class="button">Policy</button></a>&nbsp;&nbsp;&nbsp;
-           </center>
-       <br>
-       <br>
-       <br>
-       <center> 
-        <a href="/general/pages/faq.html"><button class="button">FAQ</button></a>&nbsp;&nbsp;&nbsp;
-        <a href="/general/pages/suggestions.html"><button class="button">Suggestions</button></a>&nbsp;&nbsp;&nbsp;
-        <a href="/general/pages/reportbugs.html"><button class="button">Report Bugs</button></a>&nbsp;&nbsp;&nbsp;
-       </center>
-     
-    </body><script src="/general/js/cloak.js"></script>
-</html>
+        <div id="container">
+            <h1 id="header">Suggestions</h1>
+            <input type="text" id="gameName" placeholder="Game Name" required>
+            <input type="url" id="gameUrl" placeholder="Game URL" required>
+            <button id="melt">Submit</button>
+            <div class="message" id="message"></div>
+        </div>
+    </body>
+    <script src="/general/js/suggestions.js"></script>
+</html><script src="/general/js/cloak.js"></script>
     <!-- Include Particle.js library -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
@@ -134,7 +119,6 @@
             retina_detect: true
         });
     </script>
- 
      <script>
         let deferredPrompt;
         window.addEventListener('beforeinstallprompt', (e) => {
@@ -144,3 +128,4 @@
         });
         
         </script>
+        <script src="/general/js/ai.js"></script>

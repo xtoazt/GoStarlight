@@ -1,6 +1,5 @@
 body {
     margin: 0;
- overflow: hidden;
     background-color: #171717; /* Dark background */
     height: 100vh;
     font-family: 'Arial', sans-serif;
@@ -154,7 +153,7 @@ border: none;
     padding: 10px 15px;
     color: white;
     height: 60px;
-    transition: transform 0.3s, box-shadow 0.3s; 
+    transition: all 0.3s ease;
     width: 170px;
 }
 .button:hover{
@@ -177,6 +176,7 @@ border: none;
         box-shadow: 0px 12px 36px rgba(0, 0, 0, 0.5); /* Slightly increase shadow on lift */
     }
     .row {
+        margin: 10px;
         display: flex;
         flex-wrap: wrap;
         gap: 20px;

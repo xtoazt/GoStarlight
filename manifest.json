@@ -5,9 +5,9 @@
     "display": "standalone",
     "icons": [
       {
-        "src": " ",
+        "src": "/img/starlight.png",
         "sizes": "192x192",
-        "type": "/img/starlight.png"
+        "type": "image/png"
       }
     ]
   }

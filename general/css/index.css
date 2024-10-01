@@ -16,7 +16,7 @@ body {
 }
 
 .text {
-    font-weight: 900;
+    font-weight: 700;
     font-size: 3em; /* Large font size for the welcome message */
     opacity: 0; /* Start with invisible text */
     animation: textFadeIn 3s forwards; /* Fade-in animation for text */
@@ -153,9 +153,9 @@ border: none;
     border-radius: 10px;
     padding: 10px 15px;
     color: white;
-    height: 50px;
+    height: 60px;
     transition: transform 0.3s, box-shadow 0.3s; 
-    width: 150px;
+    width: 180px;
 }
 .button:hover{
     background-color: #454545;
@@ -339,12 +339,14 @@ option{
     padding: 20px; /* Padding inside the chat container */
 }
 #chat-box {
-    border: 1px solid #444; /* Darker border */
+    box-shadow: 0 2px 10px rgb(56, 56, 56);
+    background-color: #606060;
+    border: 2px solid #444; /* Darker border */
     height: 300px;
     overflow-y: scroll;
     padding: 10px;
     flex-grow: 1; /* Allow chat box to grow */
-    border-radius: 8px; /* Rounded corners for chat box */
+    border-radius: 10px; /* Rounded corners for chat box */
 }
 #user-input {
     outline: none;
@@ -378,10 +380,9 @@ option{
   #container {
     background: rgb(61, 61, 61);
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     width: 100%; /* Full width */
-  
     display: flex; /* Enable flexbox in container */
     flex-direction: column; /* Stack children vertically */
     align-items: center; /* Center children horizontally */

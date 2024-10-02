@@ -15,7 +15,7 @@ body {
 }
 
 .text {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 3em; /* Large font size for the welcome message */
     opacity: 0; /* Start with invisible text */
     animation: textFadeIn 3s forwards; /* Fade-in animation for text */
@@ -181,6 +181,11 @@ border: none;
         flex-wrap: wrap;
         gap: 20px;
     }
+    .roww{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
     .column {
         font-weight: 900;
         position: relative;
@@ -316,7 +321,7 @@ option{
     font-weight: 900;
     background: rgba(44, 44, 44, 0.8); /* Semi-transparent white */
     margin: 10px;
-    height: 450px;
+    height: 500px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -340,7 +345,7 @@ option{
 }
 #chat-box {
     box-shadow: 0 2px 10px rgb(61, 61, 61);
-    background: rgb(61, 61, 61);
+    background-color: #333; /* Input background */
     border: 2px solid #444; /* Darker border */
     height: 300px;
     overflow-y: scroll;
@@ -364,7 +369,7 @@ option{
     width: 18%;
     padding: 10px;
     border: none;
-    background-color: #444; /* Button color */
+    background-color: #333; /* Input background */
     color: #ffffff; /* Button text color */
     cursor: pointer;
     border-radius: 4px; /* Rounded corners */
@@ -376,7 +381,6 @@ option{
  
  .text:hover {
     transform: translateY(-5%) scale(1.03);
-    font-weight: 800;
  }
 
   #container {
@@ -427,3 +431,7 @@ option{
     margin-top: 10px;
     color: green;
 }
+
+#legal{
+	margin: 10px;
+  }

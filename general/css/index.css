@@ -15,7 +15,7 @@ body {
 }
 
 .text {
-    font-weight: 500;
+    font-weight: 900;
     font-size: 3em; /* Large font size for the welcome message */
     opacity: 0; /* Start with invisible text */
     animation: textFadeIn 3s forwards; /* Fade-in animation for text */
@@ -194,7 +194,7 @@ border: none;
         overflow: hidden;
         cursor: pointer;
         transition: transform 0.5s ease; /* Slowed down the transition */
-        border-radius: 10px;
+        border-radius: 1px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
     .column img {
@@ -375,13 +375,13 @@ option{
     border-radius: 4px; /* Rounded corners */
 }
 .text {
-    font-weight: 500;
+    font-weight: 900;
    text-align: center;
    transition: transform 0.3s;
  }
  
  .text:hover {
-    font-weight: 500;
+    font-weight: 900;
     transform: translateY(-5%) scale(1.03);
  }
 

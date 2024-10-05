@@ -38,7 +38,7 @@
         <br>
         <br>
         <br>
-        <div class="text">Welcome to Starlight</div>
+        <h1 class="text"><span id="cursor"></span></h1>
         <div id="splash">UNKNOWN</div>
         <br>
         <center>
@@ -170,3 +170,25 @@
         });
         
         </script>
+            <script>
+                const text = "Welcome to Starlight";
+                const typingDelay = 400; 
+      const initialDelay = 10; 
+                const cursor = document.getElementById("cursor");
+                const h1 = document.querySelector(".text");
+        
+                function type() {
+                    setTimeout(() => {
+                        for (let i = 0; i < text.length; i++) {
+                        setTimeout(() => {
+                            h1.textContent += text[i];
+                            if (i === text.length - 1) {
+                            cursor.style.display = "none"; 
+                            }
+                        }, i * typingDelay);
+                        }
+                    }, initialDelay);
+                }
+        
+                type();
+              </script>

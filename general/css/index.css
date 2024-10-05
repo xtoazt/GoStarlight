@@ -76,7 +76,6 @@ nav:hover {
   font-size: 2em;
     font-weight: 900;
     transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for lift effect and shadow */
-    box-shadow: 0px 12px 36px rgba(0, 0, 0, 0.5); /* Slightly increase shadow on lift */
 }
 .left-link:hover{
     transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for lift effect and shadow */

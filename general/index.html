@@ -38,7 +38,7 @@
         <br>
         <br>
         <br>
-        <h1 class="text"><span id="cursor"></span></h1>
+        <h1 class="text"></h1>
         <div id="splash">UNKNOWN</div>
         <br>
         <center>
@@ -170,25 +170,24 @@
         });
         
         </script>
-            <script>
-                const text = "Welcome to Starlight";
-                const typingDelay = 400; 
-      const initialDelay = 10; 
-                const cursor = document.getElementById("cursor");
-                const h1 = document.querySelector(".text");
-        
-                function type() {
-                    setTimeout(() => {
-                        for (let i = 0; i < text.length; i++) {
+        <script>
+            const text = "Welcome to Starlight";
+            const typingDelay = 400; 
+            const initialDelay = 10; 
+            const h1 = document.querySelector(".text");
+            
+            function type() {
+                setTimeout(() => {
+                    for (let i = 0; i < text.length; i++) {
                         setTimeout(() => {
                             h1.textContent += text[i];
                             if (i === text.length - 1) {
-                            cursor.style.display = "none"; 
+                                h1.classList.remove("cursor"); // Remove cursor effect at the end
                             }
                         }, i * typingDelay);
-                        }
-                    }, initialDelay);
-                }
-        
-                type();
-              </script>
+                    }
+                }, initialDelay);
+            }
+            
+            type();
+        </script>

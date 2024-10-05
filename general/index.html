@@ -32,13 +32,14 @@
                 <a href="/general/pages/utilities.html"><img src="/img/apps.png" height="13px" width="13px">&nbsp;Utilities</a>
                 <a href="/general/pages/media.html"><img src="/img/movies.png" height="13px" width="13px">&nbsp;Media</a>
                 <a href="/general/pages/ai.html"><img src="/img/ai.png" height="13px" width="13px">&nbsp;AI</a>
+                <a href="/general/pages/search.html"><img src="/img/search.png" height="13px" width="13px">&nbsp;Search</a>
                 <a href="/general/pages/settings.html"><img src="/img/settings.png" height="13px" width="13px">&nbsp;Settings</a>
             </div>
         </nav>
         <br>
         <br>
         <br>
-        <h1 class="text"></h1>
+        <div class="text">Welcome to Starlight</div>
         <div id="splash">UNKNOWN</div>
         <br>
         <center>
@@ -63,7 +64,7 @@
           <br>
           <br>
           <center>
-            <div style="padding: 40x; border-radius: 15px; background-color: #1f1f1f; width: 30%; padding-top: 25px; padding-bottom: 25px;">
+            <div style="padding: 40x; border-radius: 15px; background-color: #1f1f1f; width: 30%; padding-top: 25px; padding-bottom: 25px; box-shadow: 0px 12px 36px rgba(62, 62, 62, 0.5); /* Slightly increase shadow on lift */">
     
             <p><b style="color: rgb(124, 124, 124);">Ads open for sale</b></p>
           </div>
@@ -169,25 +170,4 @@
           // Show your custom install button
         });
         
-        </script>
-        <script>
-            const text = "Welcome to Starlight";
-            const typingDelay = 250; 
-            const initialDelay = 10; 
-            const h1 = document.querySelector(".text");
-            
-            function type() {
-                setTimeout(() => {
-                    for (let i = 0; i < text.length; i++) {
-                        setTimeout(() => {
-                            h1.textContent += text[i];
-                            if (i === text.length - 1) {
-                                h1.classList.remove("cursor"); // Remove cursor effect at the end
-                            }
-                        }, i * typingDelay);
-                    }
-                }, initialDelay);
-            }
-            
-            type();
         </script>

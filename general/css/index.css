@@ -437,3 +437,19 @@ option{
 #legal{
 	margin: 10px;
   }
+  a{
+    color: white;
+    border: none;
+  }
+  a:visited{
+    color: white;
+    border: none;
+  }
+  a:hover{
+    color: white;
+    border: none;
+  }
+  a:active{
+    color: white;
+    border: none;
+  }

@@ -139,6 +139,7 @@ transition: all 0.3s ease;
         text-align: center;
     }
 #uv-address:focus{
+    transform: translateY(-3px); /* Slightly increased upward movement */
     border-radius: 30px;
 width: 55%;
 box-shadow: 0 0 10px rgb(177, 177, 177);
@@ -438,18 +439,22 @@ option{
 	margin: 10px;
   }
   a{
+    text-decoration: none;
     color: white;
     border: none;
   }
   a:visited{
+    text-decoration: none;
     color: white;
     border: none;
   }
   a:hover{
+    text-decoration: none;
     color: white;
     border: none;
   }
   a:active{
+    text-decoration: none;
     color: white;
     border: none;
   }

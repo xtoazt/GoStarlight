@@ -17,7 +17,7 @@ body {
 
 .text {
     padding: 0px;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 3em; /* Large font size for the welcome message */
     opacity: 0; /* Start with invisible text */
     animation: textFadeIn 3s forwards; /* Fade-in animation for text */
@@ -35,7 +35,7 @@ body {
 #splash{
     font-family: 'Poppins', sans-serif;
 text-align: center;
-font-weight: 600;
+font-weight: 500;
 font-size: 2em;
 color: #949494;
 }
@@ -49,7 +49,7 @@ color: #949494;
 nav {
     font-family: 'Poppins', sans-serif;
     font-size:medium;
-    font-weight: 900;
+    font-weight: 500;
     position: fixed; /* Fix the navbar at the top */
     top: 20px; /* Add some space from the top */
     left: 50%; /* Center the navbar horizontally */
@@ -76,7 +76,7 @@ nav:hover {
     color: white;
     text-decoration: none;
   font-size: 2em;
-    font-weight: 900;
+    font-weight: 500;
     transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for lift effect and shadow */
 }
 .left-link:hover{
@@ -122,7 +122,7 @@ height: 100%;
 z-index: -1;
 }
 #uv-address{
-    font-weight: 900;
+    font-weight: 500;
     font-family: 'Poppins', sans-serif;
 color: white;
 background-color: rgb(33, 33, 33);
@@ -155,7 +155,7 @@ box-shadow: 0 0 10px rgb(177, 177, 177);
 border: none;
 }
 .button{
-    font-weight: 900;
+    font-weight: 500;
     box-shadow: 0 0 10px rgb(40, 40, 40);
     background-color: #323232;
     border: none;
@@ -172,7 +172,7 @@ border: none;
     box-shadow: 0px 12px 36px rgba(0, 0, 0, 0.5); /* Slightly increase shadow on lift */
 }
 #type{
-    font-weight: 900;
+    font-weight: 500;
     background-color: #393939;
     border: none;
     border-radius: 5px;
@@ -197,7 +197,7 @@ border: none;
         gap: 20px;
     }
     .column {
-        font-weight: 900;
+        font-weight: 500;
         position: relative;
         width: 150px; /* Width of the square */
         height: 150px; /* Height of the square */
@@ -217,7 +217,7 @@ border: none;
         transform: translateY(-10px); /* Slightly increased upward movement */
     }
     .description {
-        font-weight: 900;
+        font-weight: 500;
         position: absolute;
         bottom: -100%;
         left: 0;
@@ -266,6 +266,7 @@ display: none;
 }
 
 .search-bar button {
+    font-family: 'Montserrat', sans-serif;
     background-color: #1d1d1d; /* Dark background */
 	padding: 10px 20px;
 	margin-left: 10px;

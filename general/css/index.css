@@ -3,7 +3,7 @@ body {
     margin: 0;
     background-color: #171717; /* Dark background */
     height: 100vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: sans-serif;
     color: #ffffff; /* White text color */
     opacity: 0; /* Start with invisible text */
     animation: fadeIn 2s forwards; /* Fade-in animation for the page */
@@ -16,6 +16,7 @@ body {
 }
 
 .text {
+    user-select: none;
     padding: 0px;
     font-weight: 500;
     font-size: 3em; /* Large font size for the welcome message */
@@ -33,7 +34,7 @@ body {
     }
 }
 #splash{
-    font-family: 'Poppins', sans-serif;
+    font-family: sans-serif;
 text-align: center;
 font-weight: 500;
 font-size: 2em;
@@ -47,7 +48,7 @@ color: #949494;
     }
     
 nav {
-    font-family: 'Poppins', sans-serif;
+    font-family: sans-serif;
     font-size:medium;
     font-weight: 500;
     position: fixed; /* Fix the navbar at the top */
@@ -123,7 +124,7 @@ z-index: -1;
 }
 #uv-address{
     font-weight: 500;
-    font-family: 'Poppins', sans-serif;
+    font-family: sans-serif;
 color: white;
 background-color: rgb(33, 33, 33);
 height: 60px;

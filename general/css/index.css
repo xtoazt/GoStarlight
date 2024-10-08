@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 body {
+    text-shadow: 
+    0 0 10px white,  /* Medium glow */
+    0 0 15px white  /* Larger glow */; 
     margin: 0;
     background-color: #171717; /* Dark background */
     height: 100vh;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: #ffffff; /* White text color */
     opacity: 0; /* Start with invisible text */
     animation: fadeIn 2s forwards; /* Fade-in animation for the page */
@@ -15,6 +19,7 @@ body {
 }
 
 .text {
+   
     padding: 0px;
     font-weight: 900;
     font-size: 3em; /* Large font size for the welcome message */
@@ -45,7 +50,7 @@ color: #949494;
     }
     
 nav {
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size:medium;
     font-weight: 900;
     position: fixed; /* Fix the navbar at the top */
@@ -121,7 +126,7 @@ z-index: -1;
 }
 #uv-address{
     font-weight: 900;
-      font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
 color: white;
 background-color: rgb(33, 33, 33);
 height: 60px;
@@ -137,6 +142,13 @@ transition: all 0.3s ease;
     }
     #uv-address::placeholder{
         text-align: center;
+    }
+    #uv-address:hover{
+        transform: translateY(-3px); /* Slightly increased upward movement */
+        border-radius: 30px;
+    width: 55%;
+    box-shadow: 0 0 10px rgb(177, 177, 177);
+    border: none;
     }
 #uv-address:focus{
     transform: translateY(-3px); /* Slightly increased upward movement */

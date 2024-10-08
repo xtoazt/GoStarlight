@@ -469,3 +469,7 @@ option{
     color: white;
     border: none;
   }
+  #ads:hover{
+    transition: all 0.3 ease;
+    transform: translateY(-3px); /* Slightly increased upward movement */
+  }

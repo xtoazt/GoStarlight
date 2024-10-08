@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 body {
-    text-shadow: 
-    0 0 10px white,  /* Medium glow */
-    0 0 15px white  /* Larger glow */; 
     margin: 0;
     background-color: #171717; /* Dark background */
     height: 100vh;
@@ -19,9 +16,8 @@ body {
 }
 
 .text {
-   
     padding: 0px;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 3em; /* Large font size for the welcome message */
     opacity: 0; /* Start with invisible text */
     animation: textFadeIn 3s forwards; /* Fade-in animation for text */
@@ -37,6 +33,7 @@ body {
     }
 }
 #splash{
+    font-family: 'Poppins', sans-serif;
 text-align: center;
 font-weight: 600;
 font-size: 2em;

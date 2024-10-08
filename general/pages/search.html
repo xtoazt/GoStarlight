@@ -27,19 +27,27 @@
         <nav>
             <a href="/general/index.html" class="left-link">Starlight</a>
             <div class="nav-links">
-                <a href="/general/pages/arcade.html"><img src="/img/arcade.png" height="11px" width="11px">&nbsp;Arcade</a>
-                <a href="/general/pages/utilities.html"><img src="/img/apps.png" height="11px" width="11px">&nbsp;Utilities</a>
-                <a href="/general/pages/media.html"><img src="/img/movies.png" height="11px" width="11px">&nbsp;Media</a>
-                <a href="/general/pages/ai.html"><img src="/img/ai.png" height="11px" width="11px">&nbsp;AI</a>
-                <a href="/general/pages/search.html"><img src="/img/search.png" height="11px" width="11px">&nbsp;Search</a>
-                <a href="/general/pages/settings.html"><img src="/img/settings.png" height="11px" width="11px">&nbsp;Settings</a>
+                <a href="/general/pages/arcade.html"><img src="/img/arcade.png" height="12px" width="12px">&nbsp;Arcade</a>
+                <a href="/general/pages/utilities.html"><img src="/img/apps.png" height="12px" width="12px">&nbsp;Utilities</a>
+                <a href="/general/pages/media.html"><img src="/img/movies.png" height="12px" width="12px">&nbsp;Media</a>
+                <a href="/general/pages/ai.html"><img src="/img/ai.png" height="12px" width="12px">&nbsp;AI</a>
+                <a href="/general/pages/search.html"><img src="/img/search.png" height="12px" width="12px">&nbsp;Search</a>
+                <a href="/general/pages/settings.html"><img src="/img/settings.png" height="12px" width="12px">&nbsp;Settings</a>
             </div>
         </nav>
         <br>
         <br>
         <div class="text">Starlight's Search/Browser</div>
         <br>
-     
+        <div class="browser" id="browserElement">
+            <div class="controls" id="controlsElement">
+                <button id="loadButton">Home</button>
+                <button id="reloadButton">Reload</button>
+                <button id="openDirectButton">Open Direct</button>
+            </div>
+            <iframe id="webFrame" class="loading" src="https://bigpanera.vercel.app" frameborder="0"></iframe>
+        </div>
+    
     </body>
     <script src="/general/js/cloak.js"></script>
 </html>
@@ -120,3 +128,4 @@
         });
         
         </script>
+        <script src="/general/js/browser.js"></script>

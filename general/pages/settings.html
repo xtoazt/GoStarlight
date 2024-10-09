@@ -39,7 +39,49 @@
         <br>
         <div class="text">Starlight's Settings</div>
         <br>
-     
+        <div class="cons"> 
+            <div class="co" id="cloakSection"> 
+                <h2 id="cloakHeader">About Blank Cloaker</h2>
+                    
+                </div>
+
+
+
+        <div class="co" id="titleFaviconSection">
+            <h2 id="titleFaviconHeader">Document Title and Favicon Changer</h2>
+            <label for="docTitle" id="docTitleLabel">Document Title:</label>
+            <input type="text" id="docTitle" placeholder="Enter document title">
+            <label for="favicon" id="faviconLabel">Favicon URL:</label>
+            <input type="text" id="favicon" placeholder="Enter favicon URL">
+            <button id="saveTitleFavicon">Save</button>
+        </div>
+    
+        <div class="co" id="bgColorSection">
+            <h2 id="bgColorHeader">Background Color Changer</h2>
+            <label for="bgColor" id="bgColorLabel">Select Background Color:</label>
+            <input type="color" id="bgColor" value="#ffffff">
+            <button id="saveBgColor">Save Background Color</button>
+        </div>
+    
+        <div class="co" id="faviconDropdownSection">
+            <h2 id="faviconDropdownHeader">Favicon Changer</h2>
+            <label for="faviconSelect" id="faviconSelectLabel">Select Favicon:</label>
+            <select id="faviconSelect">
+                <option value="">--Select a Favicon--</option>
+                <option value="https://www.google.com/favicon.ico">Google</option>
+                <option value="https://classroom.google.com/favicon.ico">Google Classroom</option>
+                <option value="https://example.com/favicon.ico">Example Favicon</option> <!-- Add more as needed -->
+            </select>
+            <button id="saveFaviconSelect">Save Selected Favicon</button>
+        </div>
+    
+        
+        <div class="co" id="siteInfoSection">
+            <h2 id="siteInfoHeader">Site Info</h2>
+            <p id="versionInfo">Version: 1.0.0</p>
+            <p class="info">© 2024 Starlight</p>
+        </div>
+    </div>
 
         
     </body>
@@ -122,3 +164,4 @@
         });
         
         </script>
+        <script src="/general/js/settings.js"></script>

@@ -34,6 +34,7 @@ body {
     }
 }
 #splash{
+    user-select: none;
     font-family: sans-serif;
 text-align: center;
 font-weight: 700;
@@ -470,15 +471,14 @@ option{
     border: none;
   }
   #ads{
-    transition: all 0.3 ease;
+    transition: transform 0.5s ease; /* Slowed down the transition */
   }
   #ads:hover{
     transform: translateY(-3px); /* Slightly increased upward movement */
   }
   #browserElement {
     width: 100%;       /* Increased width */
-    height: 90%;      /* Increased height */
-    max-height: 800px; /* Increased max height */
+    height: 600px;      /* Increased height */
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -491,16 +491,16 @@ option{
     justify-content: center;  /* Center buttons */
     gap: 10px;
     padding: 10px;
-    background-color: #007BFF;
+    background-color: #424242;
     color: white;
-    border-bottom: 2px solid #0056b3;
+    border-bottom: 2px solid #818181;
 }
 
 #loadButton, #reloadButton, #openDirectButton {
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
-    background-color: #0056b3;
+    background-color: #363636;
     color: white;
     font-weight: bold;
     cursor: pointer;
@@ -508,7 +508,7 @@ option{
 }
 
 #loadButton:hover, #reloadButton:hover, #openDirectButton:hover {
-    background-color: #003f8e;
+    background-color: #2f2f2f;
     transform: translateY(-2px);
 }
 
@@ -524,4 +524,64 @@ option{
 
 .loaded {
     opacity: 1;
+}
+
+
+.cons h2 {
+    margin-top: 20px;
+    color: #ffffff; /* Slightly lighter grey for headers */
+}
+
+.cons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.co {
+    flex: 1;
+    min-width: 300px;
+    margin: 10px;
+    padding: 15px;
+    background-color: #3b3b3b;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+#faviconSelectLabel, #bgColorLabel, #docTitleLabel {
+    color: white;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.cons input[type="text"], input[type="color"], select {
+    outline: none;
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #e0e0e0; /* Light grey input background */
+}
+
+.cons button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #666; /* Grey button */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.cons button:hover {
+    background-color: #555; /* Darker shade on hover */
+}
+
+.info, #versionInfo {
+    font-size: 0.9em;
+    color: #ffffff;
+}
+
+
+#bgColor {
+    width: 10%;
 }

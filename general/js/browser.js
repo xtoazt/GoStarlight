@@ -2,7 +2,7 @@ const webFrame = document.getElementById('webFrame');
 const loadButton = document.getElementById('loadButton');
 const reloadButton = document.getElementById('reloadButton');
 const openDirectButton = document.getElementById('openDirectButton');
-const predefinedUrl = "https://bigpanera.vercel.app"; // Predefined URL
+const predefinedUrl = " "; // Predefined URL
 
 // Load the predefined URL in the iframe
 loadButton.addEventListener('click', function() {

@@ -41,38 +41,42 @@
         <br>
         <div class="cons"> 
             <div class="co" id="cloakSection"> 
-                <h2 id="cloakHeader">About Blank Cloaker</h2>
-                    
+                <h2 id="cloakHeader">About:blank</h2>
+                <div class="button-container">
+                    <button id="openScriptButton" class="button">
+                      Open 
+                    </button>
                 </div>
 
 
 
         <div class="co" id="titleFaviconSection">
-            <h2 id="titleFaviconHeader">Document Title and Favicon Changer</h2>
-            <label for="docTitle" id="docTitleLabel">Document Title:</label>
+            <h2 id="titleFaviconHeader">Title</h2>
+<br>
             <input type="text" id="docTitle" placeholder="Enter document title">
-            <label for="favicon" id="faviconLabel">Favicon URL:</label>
+<br>
             <input type="text" id="favicon" placeholder="Enter favicon URL">
             <button id="saveTitleFavicon">Save</button>
         </div>
     
         <div class="co" id="bgColorSection">
-            <h2 id="bgColorHeader">Background Color Changer</h2>
-            <label for="bgColor" id="bgColorLabel">Select Background Color:</label>
+            <h2 id="bgColorHeader">Custom Themes</h2>
+<br>
             <input type="color" id="bgColor" value="#ffffff">
-            <button id="saveBgColor">Save Background Color</button>
+            <br>
+            <button id="saveBgColor">Save</button>
         </div>
     
         <div class="co" id="faviconDropdownSection">
-            <h2 id="faviconDropdownHeader">Favicon Changer</h2>
-            <label for="faviconSelect" id="faviconSelectLabel">Select Favicon:</label>
+            <h2 id="faviconDropdownHeader">Tab Cloak</h2>
+<br>
             <select id="faviconSelect">
                 <option value="">--Select a Favicon--</option>
                 <option value="https://www.google.com/favicon.ico">Google</option>
                 <option value="https://classroom.google.com/favicon.ico">Google Classroom</option>
                 <option value="https://example.com/favicon.ico">Example Favicon</option> <!-- Add more as needed -->
             </select>
-            <button id="saveFaviconSelect">Save Selected Favicon</button>
+            <button id="saveFaviconSelect">Save</button>
         </div>
     
         
@@ -165,3 +169,4 @@
         
         </script>
         <script src="/general/js/settings.js"></script>
+        <script src="/general/js/cloak.js"></script>

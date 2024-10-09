@@ -39,10 +39,27 @@
         <br>
         <div class="text">Starlight's Search/Browser</div>
         <br>
-        
+        <br>
+        <center>
+            <form id="uv-form">
+              <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/> 
+              <input id="uv-address" type="text" placeholder="Search the web with Starlight" class="form__input"/>
+            </form>
+            <div class="desc left-margin">
+              <p id="uv-error"></p>
+              <pre id="uv-error-code"></pre>
+            </div>
+          </center>
     
     </body>
+
     <script src="/general/js/cloak.js"></script>
+<script src="/static/uv/uv.bundle.js" defer></script>
+<script src="/static/uv/uv.config.js" defer></script>
+<script src="/static/register-sw.js" defer></script>
+<script src="/static/search.js" defer></script>
+<script src="/static/index.js" defer></script>
+<script src="/static/error.js" defer></script>
 </html>
     <!-- Include Particle.js library -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>

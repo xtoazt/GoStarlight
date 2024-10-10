@@ -532,18 +532,20 @@ option{
     color: #ffffff; /* Slightly lighter grey for headers */
 }
 
-
+.con{
+    display: flex;
+    flex-wrap: wrap;
+}
 .co {
     flex: 1;
     min-width: 300px;
     margin: 10px;
     padding: 15px;
-    border-radius: 8px;
-    background-color: #323232;
-    box-shadow: #333;
+    border-radius: 5px;
+background-color: #3b3b3b;
 }
 
-.cons input[type="text"], .cons input[type="color"], .cons select {
+.co input[type="text"], .co input[type="color"], .co select {
     outline: none;
     width: 90%;
     padding: 10px;
@@ -552,7 +554,7 @@ option{
     background-color: #e0e0e0; /* Light grey input background */
 }
 
-.cons button {
+.co button {
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
@@ -563,7 +565,7 @@ option{
     margin-top: 10px;
 }
 
-.cons button:hover {
+.co button:hover {
     background-color: #555; /* Darker shade on hover */
 }
 

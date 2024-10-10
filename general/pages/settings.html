@@ -40,63 +40,42 @@
         <div class="text">Starlight's Settings</div>
         <br>
 
-            <div class="co" id="cloakSection"> 
-                <h2 id="cloakHeader">About:blank</h2>
-                <div class="button-container">
-                    <button id="openScriptButton" class="button">
-                      Open 
-                    </button>
-                </div>
-
-
-
-        <div class="co" id="titleFaviconSection">
-            <h2 id="titleFaviconHeader">Title</h2>
-<br>
-            <input type="text" id="docTitle" placeholder="Enter document title">
-<br>
-            <input type="text" id="favicon" placeholder="Enter favicon URL">
-            <button id="saveTitleFavicon">Save</button>
+        <h1 id="settingsTitle">Settings</h1>
+        <div id="settingsContainer">
+            <div class="settingsColumn">
+           <h1>Title</h1>
+                
+                <input type="text" id="docTitleInput" placeholder="Enter document title">
+                
+                <input type="text" id="faviconInput" placeholder="Enter favicon URL">
+                <button id="saveTitleFaviconButton">Save Title and Favicon</button>
+            </div>
+            <div class="settingsColumn">
+                
+                <input type="color" id="bgColorInput">
+                <button id="saveBgColorButton">Save Background Color</button>
+                <button id="resetBgColorButton" class="reset-button">Reset Background Color</button>
+            </div>
+            <div class="settingsColumn">
+                
+                <select id="faviconSelectInput">
+                    <option value="">--Select Favicon--</option>
+                    <option value="https://example.com/favicon1.ico">Favicon 1</option>
+                    <option value="https://example.com/favicon2.ico">Favicon 2</option>
+                </select>
+                <button id="saveFaviconSelectButton">Save Selected Favicon</button>
+            </div>
+            <div class="settingsColumn">
+                
+              
+            </div>
+            <div class="settingsColumn" id="siteInfo">
+                <h2>Site Info</h2>
+                <p><strong>Site Name:</strong>Starlight</p>
+                <p><strong>Description:</strong>Starlight is your all-in-one platform for utilities, hacks, games, and proxies.</p>
+                <p><strong>Version:</strong> 1.0.0</p>
+            </div>
         </div>
-    
-        <div class="co" id="bgColorSection">
-            <h2 id="bgColorHeader">Custom Themes</h2>
-<br>
-            <input type="color" id="bgColor" value="#ffffff">
-            <br>
-            <button id="saveBgColor">Save</button>
-        </div>
-    
-        <div class="co" id="faviconDropdownSection">
-            <h2 id="faviconDropdownHeader">Tab Cloak</h2>
-<br>
-            <select id="faviconSelect">
-                <option value="/general/img/starlight.png">--Select a Favicon--</option>
-                <option value="/img/favicons/google.png">Google</option>
-                <option value="/img/favicons/google-class.webp">Google Classroom</option>
-                <option value="/img/favicons/bingg.png">Bing</option> <!-- Add more as needed -->
-                <option value="/img/favicons/google-drive.webp">Google Drive</option> <!-- Add more as needed -->
-                <option value="/img/favicons/google-docs.webp">Google Docs</option> <!-- Add more as needed -->
-                <option value="/img/favicons/google-keep.ico">Google Keep</option> <!-- Add more as needed -->
-                <option value="/img/favicons/google-sheets.ico">Google Sheets</option> <!-- Add more as needed -->
-                <option value="/img/favicons/google-slides.ico">Google Slides</option> <!-- Add more as needed -->
-                <option value="/img/favicons/ixll.png">Ixl</option> <!-- Add more as needed -->
-                <option value="/img/favicons/khanacademy.ico">Khan Academy</option> <!-- Add more as needed -->
-                <option value="/img/favicons/pornhub.png">Pornhub</option> <!-- Add more as needed -->
-                <option value="/img/favicons/Wikipedia.ico">Wikipedia</option> <!-- Add more as needed -->
-                <option value="/img/favicons/gmail.ico">Gmail</option> <!-- Add more as needed -->
-            
-            </select>
-            <button id="saveFaviconSelect">Save</button>
-        </div>
-    
-        
-        <div class="co" id="siteInfoSection">
-            <h2 id="siteInfoHeader">Site Info</h2>
-            <p id="versionInfo">Version: 1.0.0</p>
-            <p class="info">© 2024 Starlight</p>
-        </div>
-
         
     </body>
     <script src="/general/js/cloak.js"></script>

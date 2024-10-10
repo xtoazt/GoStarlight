@@ -56,7 +56,7 @@ nav {
     top: 20px; /* Add some space from the top */
     left: 50%; /* Center the navbar horizontally */
     transform: translateX(-50%); /* Offset the navbar by 50% of its own width */
-    width: 80%; /* Set the width to 80% of the screen */
+    width: 76%; 
     padding: 20px; /* Padding for the navbar */
     background-color: #171717; /* Dark background */
     color: white; /* Text color */
@@ -526,60 +526,50 @@ option{
     opacity: 1;
 }
 
-
-.cons h2 {
-    margin-top: 20px;
-    color: #ffffff; /* Slightly lighter grey for headers */
+#settingsTitle {
+    color: #333;
+    text-align: center;
 }
-
-.con{
+#settingsContainer {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
-.co {
+.settingsColumn {
     flex: 1;
-    min-width: 300px;
     margin: 10px;
-    padding: 15px;
+    padding: 20px;
+    background-color: white;
     border-radius: 5px;
-background-color: #3b3b3b;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-width: 250px; /* Ensures columns have a minimum width */
 }
-
-.co input[type="text"], .co input[type="color"], .co select {
-    outline: none;
+.settingsLabel {
+    display: block;
+    margin: 10px 0 5px;
+}
+#docTitleInput, #faviconInput, #bgColorInput, #faviconSelectInput, #blankCloakerInput {
     width: 90%;
-    padding: 10px;
+    padding: 8px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: #e0e0e0; /* Light grey input background */
 }
-
-.co button {
+#saveTitleFaviconButton, #saveBgColorButton, #resetBgColorButton, #saveFaviconSelectButton, #saveCloakerButton {
     padding: 10px 15px;
+    background-color: #474747;
+    color: white;
     border: none;
     border-radius: 4px;
-    background-color: #666; /* Grey button */
-    color: white;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-top: 10px;
 }
-
-.co button:hover {
-    background-color: #555; /* Darker shade on hover */
+#saveTitleFaviconButton:hover, #saveBgColorButton:hover, #resetBgColorButton:hover, #saveFaviconSelectButton:hover, #saveCloakerButton:hover {
+    background-color: #444444;
 }
-
-.info, #versionInfo {
-    font-size: 0.9em;
-    color: #ffffff;
+.reset-button {
+    background-color: #dc3545; /* Red color for reset button */
 }
-
-
-#bgColor {
-    width: 10%;
-}
-
-#faviconSelect{
-    width: 50%;
-    outline: none;
+.reset-button:hover {
+    background-color: #c82333; /* Darker red on hover */
 }

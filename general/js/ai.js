@@ -40,7 +40,7 @@ async function sendMessage() {
 
         // Delay the display of the AI response
         setTimeout(() => {
-            chatBox.innerHTML += `<p><strong>AI:</strong> ${aiResponse}</p>`;
+            chatBox.innerHTML += `<p><strong>StarlightAI:</strong> ${aiResponse}</p>`;
             chatBox.scrollTop = chatBox.scrollHeight;
             console.log('Response received and displayed');
         }, 1000); // 1 second delay

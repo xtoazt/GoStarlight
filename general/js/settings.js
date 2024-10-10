@@ -1,92 +1,75 @@
-  // Document Title and Favicon Changer
-  const docTitleInput = document.getElementById('docTitle');
-  const faviconInput = document.getElementById('favicon');
-  const saveTitleFaviconButton = document.getElementById('saveTitleFavicon');
+const docTitleInput = document.getElementById('docTitleInput');
+const faviconInput = document.getElementById('faviconInput');
+const saveTitleFaviconButton = document.getElementById('saveTitleFaviconButton');
 
-  // Load saved title and favicon from local storage
-  document.addEventListener('DOMContentLoaded', () => {
-      const savedTitle = localStorage.getItem('docTitle');
-      const savedFavicon = localStorage.getItem('favicon');
-      const savedPanicKey = localStorage.getItem('panicKey');
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTitle = localStorage.getItem('docTitle');
+    const savedFavicon = localStorage.getItem('favicon');
+    const savedBgColor = localStorage.getItem('bgColor');
 
-      if (savedTitle) {
-          document.title = savedTitle;
-          docTitleInput.value = savedTitle;
-      }
+    if (savedTitle) {
+        document.title = savedTitle;
+        docTitleInput.value = savedTitle;
+    }
 
-      if (savedFavicon) {
-          const link = document.createElement('link');
-          link.rel = 'icon';
-          link.href = savedFavicon;
-          document.head.appendChild(link);
-          faviconInput.value = savedFavicon;
-      }
+    if (savedFavicon) {
+        const link = document.createElement('link');
+        link.rel = 'icon';
+        link.href = savedFavicon;
+        document.head.appendChild(link);
+        faviconInput.value = savedFavicon;
+    }
 
-      // Background Color
-      const savedBgColor = localStorage.getItem('bgColor');
-      if (savedBgColor) {
-          document.body.style.backgroundColor = savedBgColor;
-          document.getElementById('bgColor').value = savedBgColor;
-      }
+    if (savedBgColor) {
+        document.body.style.backgroundColor = savedBgColor;
+        document.getElementById('bgColorInput').value = savedBgColor;
+    }
+});
 
-      // Panic Key
-      if (savedPanicKey) {
-          document.getElementById('panicKey').value = savedPanicKey;
-          document.addEventListener('keydown', (e) => {
-              if (e.key === savedPanicKey) {
-                  document.getElementById('panicMessage').style.display = 'block';
-                  setTimeout(() => {
-                      document.getElementById('panicMessage').style.display = 'none';
-                  }, 2000);
-              }
-          });
-      }
-  });
+saveTitleFaviconButton.addEventListener('click', () => {
+    const newTitle = docTitleInput.value;
+    const newFavicon = faviconInput.value;
+    document.title = newTitle;
 
-  // Save Document Title and Favicon
-  saveTitleFaviconButton.addEventListener('click', () => {
-      const newTitle = docTitleInput.value;
-      const newFavicon = faviconInput.value;
-      document.title = newTitle;
+    const link = document.createElement('link');
+    link.rel = 'icon';
+    link.href = newFavicon;
+    document.head.appendChild(link);
 
-      // Update favicon
-      const link = document.createElement('link');
-      link.rel = 'icon';
-      link.href = newFavicon;
-      document.head.appendChild(link);
+    localStorage.setItem('docTitle', newTitle);
+    localStorage.setItem('favicon', newFavicon);
+});
 
-      // Save to local storage
-      localStorage.setItem('docTitle', newTitle);
-      localStorage.setItem('favicon', newFavicon);
-  });
+const bgColorInput = document.getElementById('bgColorInput');
+const saveBgColorButton = document.getElementById('saveBgColorButton');
+const resetBgColorButton = document.getElementById('resetBgColorButton');
 
-  // Background Color Changer
-  const bgColorInput = document.getElementById('bgColor');
-  const saveBgColorButton = document.getElementById('saveBgColor');
+saveBgColorButton.addEventListener('click', () => {
+    const newBgColor = bgColorInput.value;
+    document.body.style.backgroundColor = newBgColor;
+    localStorage.setItem('bgColor', newBgColor);
+});
 
-  saveBgColorButton.addEventListener('click', () => {
-      const newBgColor = bgColorInput.value;
-      document.body.style.backgroundColor = newBgColor;
-      localStorage.setItem('bgColor', newBgColor);
-  });
+resetBgColorButton.addEventListener('click', () => {
+    document.body.style.backgroundColor = '#f4f4f4'; // Reset to default color
+    bgColorInput.value = '#f4f4f4'; // Reset input value
+    localStorage.removeItem('bgColor'); // Remove from local storage
+});
 
-  // Favicon Dropdown Changer
-  const faviconSelect = document.getElementById('faviconSelect');
-  const saveFaviconSelectButton = document.getElementById('saveFaviconSelect');
+const faviconSelectInput = document.getElementById('faviconSelectInput');
+const saveFaviconSelectButton = document.getElementById('saveFaviconSelectButton');
 
-  saveFaviconSelectButton.addEventListener('click', () => {
-      const selectedFavicon = faviconSelect.value;
-      if (selectedFavicon) {
-          // Update favicon
-          const link = document.createElement('link');
-          link.rel = 'icon';
-          link.href = selectedFavicon;
-          document.head.appendChild(link);
+saveFaviconSelectButton.addEventListener('click', () => {
+    const selectedFavicon = faviconSelectInput.value;
+    if (selectedFavicon) {
+        const link = document.createElement('link');
+        link.rel = 'icon';
+        link.href = selectedFavicon;
+        document.head.appendChild(link);
 
-          // Save to local storage
-          localStorage.setItem('favicon', selectedFavicon);
-          faviconInput.value = selectedFavicon; // Update input field
-      } else {
-          alert("Please select a favicon.");
-      }
-  });
+        localStorage.setItem('favicon', selectedFavicon);
+        faviconInput.value = selectedFavicon;
+    } else {
+        alert("Please select a favicon.");
+    }
+});

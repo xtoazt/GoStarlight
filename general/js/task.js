@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
         button.style.opacity = "0.5";
         /* Make it the opisite color from its background */
         button.style.filter = "invert(1)";
-        button.style.borderRadius = "8px";
+        button.style.borderRadius = "5px";
         button.style.cursor = "pointer";
         button.onclick = onClickHandler;
         // append to #root

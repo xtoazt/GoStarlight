@@ -573,3 +573,10 @@ option{
 .reset-button:hover {
     background-color: #c82333; /* Darker red on hover */
 }
+
+button {
+  transition: background-color 0.3s, transform 0.3s;
+  }
+  button:hover {
+  transform: scale(1.1);
+  }

@@ -4,14 +4,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function createButton(text, iconSrc, onClickHandler) {
         const button = document.createElement("button");
-        button.innerHTML = `<img src='${iconSrc}' style='height: 30px; vertical-align: middle; margin-right: 5px;'/>${text}`;
+        button.innerHTML = `<img src='${iconSrc}' style='height: 20px; vertical-align: middle; margin-right: 5px;'/>${text}`;
         button.style.position = "fixed";
         button.style.top = `${20 + 50 * buttonCount}px`;
         button.style.left = "20px";
         button.style.zIndex = "285239232423";
         button.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
         button.style.color = "white";
-        button.style.padding = "15px";
+        button.style.padding = "10px";
         button.style.border = "none";
         button.style.opacity = "0.5";
         /* Make it the opisite color from its background */

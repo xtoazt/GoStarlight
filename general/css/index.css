@@ -56,7 +56,7 @@ nav {
     top: 20px; /* Add some space from the top */
     left: 50%; /* Center the navbar horizontally */
     transform: translateX(-50%); /* Offset the navbar by 50% of its own width */
-    width: 76%; 
+    width: 80%; 
     padding: 20px; /* Padding for the navbar */
     background-color: #171717; /* Dark background */
     color: white; /* Text color */

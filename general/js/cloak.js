@@ -11,6 +11,14 @@ if (url) {
       win = window.open();
       win.document.body.style.margin = '0';
       win.document.body.style.height = '100vh';
+
+      // Set the title and favicon
+      win.document.title = "Google";
+      var link = win.document.createElement('link');
+      link.rel = 'icon';
+      link.href = '/img/favicons/google.webp'; // Google favicon
+      win.document.head.appendChild(link);
+
       var iframe = win.document.createElement('iframe');
       iframe.style.border = 'none';
       iframe.style.width = '100%';
@@ -18,6 +26,8 @@ if (url) {
       iframe.style.margin = '0';
       iframe.src = url;
       win.document.body.appendChild(iframe);
+
+      // Redirect the current window to Google
       window.location.replace("https://google.com");
 
       var interval = setInterval(function() {

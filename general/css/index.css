@@ -390,7 +390,7 @@ option{
     border-radius: 4px; /* Rounded corners */
 }
 .text {
-    font-weight: 900;
+    font-weight: 700;
    text-align: center;
    transition: transform 0.3s;
  }
@@ -550,9 +550,17 @@ option{
     display: block;
     margin: 10px 0 5px;
 }
-#docTitleInput, #faviconInput, #bgColorInput, #faviconSelectInput, #blankCloakerInput {
+#docTitleInput, #faviconInput, #faviconSelectInput, #blankCloakerInput {
     outline: none;
     width: 90%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+#bgColorInput{
+    outline: none;
+    width: 20%;
     padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
@@ -577,3 +585,33 @@ option{
     background-color: #c82333; /* Darker red on hover */
 }
 
+#faviconSelectInput{
+    outline: none;
+    width: 40%;
+    padding: 8px;
+    height:30px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+
+* {
+    background-color:black;
+cursor: none; /* Hide the cursor on all elements */
+}
+
+
+
+.custom-cursor {
+position: absolute;
+width: 20px; /* Medium size dot */
+height: 20px;
+border-radius: 50%;
+background-color: rgb(255, 255, 255, 0.8); /* Glowing pink dot */
+box-shadow: 0 0 15px rgb(255, 255, 255, 0.8), 0 0 30px rgb(255, 255, 255, 0.6); 
+animation: blink 1s infinite;
+pointer-events: none; /* Prevent the cursor from interfering with interactions */
+transition: transform 0.1s ease;
+}

@@ -595,23 +595,3 @@ option{
     border-radius: 4px;
 }
 
-
-
-* {
-    background-color:black;
-cursor: none; /* Hide the cursor on all elements */
-}
-
-
-
-.custom-cursor {
-position: absolute;
-width: 20px; /* Medium size dot */
-height: 20px;
-border-radius: 50%;
-background-color: rgb(255, 255, 255, 0.8); /* Glowing pink dot */
-box-shadow: 0 0 15px rgb(255, 255, 255, 0.8), 0 0 30px rgb(255, 255, 255, 0.6); 
-animation: blink 1s infinite;
-pointer-events: none; /* Prevent the cursor from interfering with interactions */
-transition: transform 0.1s ease;
-}

@@ -620,9 +620,9 @@ option{
     text-align: center;
   }
   #mom{
-    box-shadow: 0 0 10px  rgb(189, 181, 181);
+    box-shadow: 0 0 10px  rgb(27, 27, 27);
     border: none;
-    background-color: rgb(189, 181, 181);
+    background-color: rgb(65, 65, 65);
     border-radius: 10px;
     height:30px;
     width:60px;

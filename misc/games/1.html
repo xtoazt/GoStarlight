@@ -23,6 +23,37 @@
   gtag('config', 'G-36EM66LHER');
 </script>
 <style>
+      .share-container {
+            position: relative;
+        }
+        .notification {
+            display: none;
+            position: absolute;
+            bottom: 80px; /* Adjusted for better visibility */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: white;
+            padding: 30px;
+            border-radius: 5px;
+            width: 300px; /* Set a fixed width for the notification */
+            text-align: center;
+            opacity: 0; /* Start hidden */
+            transition: opacity 0.5s ease; /* Smooth transition for fade */
+        }
+        .notification.show {
+            display: block; /* Show when needed */
+            opacity: 1; /* Fully visible */
+        }
+        .copy-button {
+            margin-left: 10px;
+            padding: 5px 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
      .container-iframe {
        width:100%;
    margin-left: 2vw;

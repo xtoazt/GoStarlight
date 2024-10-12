@@ -540,6 +540,7 @@ option{
     flex-wrap: wrap;
 }
 .settingsColumn {
+    flex-direction: column;
     flex: 1;
     margin: 10px;
     padding: 20px;
@@ -597,3 +598,32 @@ option{
     border-radius: 4px;
 }
 
+#emailInput{
+    padding: 20px;
+    box-shadow: 0 0 10px  rgb(20, 20, 20);
+    border: none;
+    background-color: rgb(68, 68, 68);
+    border-radius: 20px;
+    height: 80px;
+    width:330px;
+  }
+  #messageInput{
+    padding: 20px;
+    box-shadow: 0 0 10px   rgb(20, 20, 20);
+    border: none;
+    background-color: rgb(66, 66, 66);
+    border-radius: 20px;
+    height: 80px;
+    width:330px;
+  }
+  #forms{
+    text-align: center;
+  }
+  #mom{
+    box-shadow: 0 0 10px  rgb(189, 181, 181);
+    border: none;
+    background-color: rgb(189, 181, 181);
+    border-radius: 10px;
+    height:30px;
+    width:60px;
+  }

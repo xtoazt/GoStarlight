@@ -51,7 +51,7 @@ color: #949494;
     
 nav {
     font-family: sans-serif;
-    font-size: 30px;
+    font-size: 10px;
     font-weight: 700;
     position: fixed; /* Fix the navbar at the top */
     top: 20px; /* Add some space from the top */

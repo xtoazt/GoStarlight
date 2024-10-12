@@ -51,7 +51,7 @@ saveBgColorButton.addEventListener('click', () => {
 });
 
 resetBgColorButton.addEventListener('click', () => {
-    document.body.style.backgroundColor = '#f4f4f4'; // Reset to default color
+    document.body.style.backgroundColor = '#171717'; // Reset to default color
     bgColorInput.value = '#f4f4f4'; // Reset input value
     localStorage.removeItem('bgColor'); // Remove from local storage
 });

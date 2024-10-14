@@ -44,7 +44,7 @@
         <br>
         <br>
         <br>
-        <div class="text">Welcome to Starlight</div>
+        <div id="text"></div>
         <div id="splash">UNKNOWN</div>
         <br>
         <center>
@@ -191,3 +191,24 @@
         
         </script>
                 <script src="/general/js/settings.js"></script>
+                <script>
+                    const text = "Welcome to Starlight";
+                    const typingDelay = 100; 
+                    const initialDelay = 300; 
+                    const div = document.getElementById("text");
+            
+                    function type() {
+                        setTimeout(() => {
+                            for (let i = 0; i < text.length; i++) {
+                                setTimeout(() => {
+                                    div.textContent += text[i];
+                                    if (i === text.length - 1) {
+                                        cursor.style.display = "none"; 
+                                    }
+                                }, i * typingDelay);
+                            }
+                        }, initialDelay);
+                    }
+            
+                    type();
+                </script>

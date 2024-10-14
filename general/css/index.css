@@ -18,6 +18,7 @@ body {
 }
 
 .text {
+    font-family: 'Inter', sans-serif;
     user-select: none;
     padding: 0px;
     font-weight: 700;
@@ -36,8 +37,9 @@ body {
     }
 }
 #splash{
+
     user-select: none;
-    font-family: sans-serif;
+    font-family: 'Inter', sans-serif;
 text-align: center;
 font-weight: 700;
 font-size: 2em;
@@ -51,7 +53,7 @@ color: #949494;
     }
     
 nav {
-    font-family: sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 15px;
     font-weight: 700;
     position: fixed; /* Fix the navbar at the top */
@@ -127,7 +129,7 @@ z-index: -1;
 }
 #uv-address{
     font-weight: 700;
-    font-family: sans-serif;
+    font-family: 'Inter', sans-serif;
 color: white;
 background-color: rgb(33, 33, 33);
 height: 60px;

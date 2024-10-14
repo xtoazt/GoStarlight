@@ -173,7 +173,7 @@ border: none;
     width: 170px;
 }
 .button:hover{
-    background-color: #333333;
+    background-color: #262626;
     transform: translateY(-5px);     
     box-shadow: 0px 12px 36px rgba(0, 0, 0, 0.5); /* Slightly increase shadow on lift */
 }

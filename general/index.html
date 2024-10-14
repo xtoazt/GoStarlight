@@ -22,19 +22,6 @@
 
   gtag('config', 'G-36EM66LHER');
 </script>
-<style>
-    body {
-    user-select: none;
-    margin: 0;
-    background-color: #171717; /* Dark background */
-    height: 100vh;
-    font-family: 'Inter', sans-serif;
-    color: #ffffff; /* White text color */
-    opacity: 0; /* Start with invisible text */
-    animation: fadeIn 5s forwards; /* Fade-in animation for the page */
-}
-
-</style>
     </head>
     <body>
      
@@ -57,7 +44,7 @@
         <br>
         <br>
         <br>
-        <div class="text"></div>
+        <div class="text">Welcome to Starlight</div>
         <div id="splash">Loading...</div>
         <br>
         <center>
@@ -204,23 +191,4 @@
         
         </script>
                 <script src="/general/js/settings.js"></script>
-                <script>
-                    const text = "Welcome to Starlight";
-                    const typingDelay = 100; 
-                    const initialDelay = 300; 
-                    const div = document.querySelector(".text"); // Changed to select by class
-                    function type() {
-            setTimeout(() => {
-                for (let i = 0; i < text.length; i++) {
-                    setTimeout(() => {
-                        div.textContent += text[i]; // Updated to use div
-                        if (i === text.length - 1) {
-                            cursor.style.display = "none"; 
-                        }
-                    }, i * typingDelay);
-                }
-            }, initialDelay);
-        }
-
-        type();
-                </script>
+             

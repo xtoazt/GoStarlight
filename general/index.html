@@ -44,7 +44,7 @@
         <br>
         <br>
         <br>
-        <div id="text"></div>
+        <div class="text"></div>
         <div id="splash">UNKNOWN</div>
         <br>
         <center>
@@ -195,20 +195,19 @@
                     const text = "Welcome to Starlight";
                     const typingDelay = 100; 
                     const initialDelay = 300; 
-                    const div = document.getElementById("text");
-            
+                    const div = document.querySelector(".text"); // Changed to select by class
                     function type() {
-                        setTimeout(() => {
-                            for (let i = 0; i < text.length; i++) {
-                                setTimeout(() => {
-                                    div.textContent += text[i];
-                                    if (i === text.length - 1) {
-                                        cursor.style.display = "none"; 
-                                    }
-                                }, i * typingDelay);
-                            }
-                        }, initialDelay);
-                    }
-            
-                    type();
+            setTimeout(() => {
+                for (let i = 0; i < text.length; i++) {
+                    setTimeout(() => {
+                        div.textContent += text[i]; // Updated to use div
+                        if (i === text.length - 1) {
+                            cursor.style.display = "none"; 
+                        }
+                    }, i * typingDelay);
+                }
+            }, initialDelay);
+        }
+
+        type();
                 </script>

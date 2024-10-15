@@ -459,17 +459,13 @@ option{
     color: white;
     box-shadow: 0px 8px 24px rgba(15, 15, 15, 0.4);
 background-color: #171717;
-left: 50%;
+margin-left: 10%;
+margin-right: 10%;
 width: 80%;
 border-radius: 20px;
-margin: 20px;
 padding: 30px;
 transition: all 0.5s ease; /* Slowed down the transition */
-  }
-  #legal:hover{
-    transform: translateY(-3px);   
-    box-shadow: 0px 8px 24px rgba(34, 34, 34, 0.4);
-background-color: #292929;
+margin-bottom: 50px;
   }
   a{
     text-decoration: none;

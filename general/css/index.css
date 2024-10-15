@@ -28,7 +28,6 @@ body {
     z-index: 2; /* Ensure text is above the particles */
     position: relative; /* Position relative to the navbar */
     margin-top: 100px; /* Space below the navbar */
-    text-align: center; /* Center the text */
 }
 
 @keyframes textFadeIn {
@@ -161,6 +160,7 @@ box-shadow: 0 0 10px rgb(177, 177, 177);
 border: none;
 }
 .button{
+    font-family: 'Inter', sans-serif;
     font-weight: 700;
     box-shadow: 0 0 10px rgb(40, 40, 40);
     background-color: #202020;
@@ -185,11 +185,11 @@ border: none;
     color: white;
     box-shadow: 0px 12px 36px rgba(59, 59, 59, 0.5); /* Slightly increase shadow on lift */
     transition: transform 0.3s, box-shadow 0.3s; 
-    padding: 10px 15px; 
+    padding: 15px 20px; 
     }
     #type:hover{
-        transform: translateY(-5px);     
-        box-shadow: 0px 12px 36px rgba(0, 0, 0, 0.5); /* Slightly increase shadow on lift */
+        transform: translateY(-3px);     
+        box-shadow: 0px 12px 36px rgba(19, 19, 19, 0.5); /* Slightly increase shadow on lift */
     }
     .row {
         margin: 30px;
@@ -454,7 +454,22 @@ option{
 }
 
 #legal{
-	margin: 10px;
+    font-family: 'Inter' sans-serif;
+    font-weight: 700;
+    color: white;
+    box-shadow: 0px 8px 24px rgba(15, 15, 15, 0.4);
+background-color: #171717;
+left: 50%;
+width: 80%;
+border-radius: 20px;
+margin: 20px;
+padding: 30px;
+transition: all 0.5s ease; /* Slowed down the transition */
+  }
+  #legal:hover{
+    transform: translateY(-3px);   
+    box-shadow: 0px 8px 24px rgba(34, 34, 34, 0.4);
+background-color: #292929;
   }
   a{
     text-decoration: none;

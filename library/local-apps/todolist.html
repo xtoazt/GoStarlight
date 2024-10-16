@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        #todo-form {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        #todo-input {
+            padding: 10px;
+            width: 300px;
+        }
+        #add-button {
+            padding: 10px;
+            cursor: pointer;
+        }
+        #todo-list {
+            list-style: none;
+            padding: 0;
+        }
+        .todo-item {
+         width:500px;
+            display: flex;
+            justify-content: space-between;
+            background: #fff;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .delete-button {
+            background: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>To-Do List</h1>
+    <div id="todo-form">
+        <input type="text" id="todo-input" placeholder="Add a new task...">
+        <button id="add-button">Add</button>
+    </div>
+      <center>
+    <ul id="todo-list"></ul>
+      </center>
+    <script>
+        const todoInput = document.getElementById('todo-input');
+        const addButton = document.getElementById('add-button');
+        const todoList = document.getElementById('todo-list');
+
+        // Load tasks from local storage
+        document.addEventListener('DOMContentLoaded', loadTasks);
+
+        addButton.addEventListener('click', addTask);
+
+        function addTask() {
+            const taskText = todoInput.value.trim();
+            if (taskText) {
+                createTaskElement(taskText);
+                saveTaskToLocalStorage(taskText);
+                todoInput.value = '';
+            }
+        }
+
+        function createTaskElement(taskText) {
+            const li = document.createElement('li');
+            li.className = 'todo-item';
+            li.innerHTML = `${taskText} <button class="delete-button">Delete</button>`;
+            todoList.appendChild(li);
+
+            // Add delete functionality
+            li.querySelector('.delete-button').addEventListener('click', function () {
+                todoList.removeChild(li);
+                removeTaskFromLocalStorage(taskText);
+            });
+        }
+
+        function saveTaskToLocalStorage(taskText) {
+            const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            tasks.push(taskText);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+        }
+
+        function removeTaskFromLocalStorage(taskText) {
+            const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            const updatedTasks = tasks.filter(task => task !== taskText);
+            localStorage.setItem('tasks', JSON.stringify(updatedTasks));
+        }
+
+        function loadTasks() {
+            const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            tasks.forEach(createTaskElement);
+        }
+    </script>
+</body>
+</html>

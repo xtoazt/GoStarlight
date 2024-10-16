@@ -340,7 +340,7 @@ option{
     font-weight: 700;
     background: rgba(28, 28, 28, 0.8); /* Semi-transparent white */
     margin: 10px;
-    height: 60%;
+    height: 550px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -611,19 +611,23 @@ option{
 }
 
 #emailInput{
+    outline: none;
+    color: white;
     padding: 20px;
     box-shadow: 0 0 10px  rgb(20, 20, 20);
     border: none;
-    background-color: rgb(68, 68, 68);
+    background-color: rgb(65, 65, 65);
     border-radius: 20px;
     height: 80px;
     width:330px;
   }
   #messageInput{
+    outline: none;
+    color: white;
     padding: 20px;
     box-shadow: 0 0 10px   rgb(20, 20, 20);
     border: none;
-    background-color: rgb(66, 66, 66);
+    background-color: rgb(65, 65, 65););
     border-radius: 20px;
     height: 80px;
     width:330px;
@@ -632,14 +636,19 @@ option{
     text-align: center;
   }
   #mom{
+    color: white;
     box-shadow: 0 0 10px  rgb(27, 27, 27);
     border: none;
     background-color: rgb(65, 65, 65);
     border-radius: 10px;
     height:30px;
     width:60px;
+    transition: all 0.5 ease;
   }
-
+#mom{
+    box-shadow: 0 0 10px  rgb(41, 41, 41);
+    transform: translateY(-3px);
+}
   .image-container {
     font-weight:700;
 color: lightgrey;

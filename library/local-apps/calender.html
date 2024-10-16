@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Calendar App</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        #calendar {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        input[type="date"] {
+            padding: 10px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            margin: 10px 0;
+            width: 200px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #notification {
+            margin-top: 20px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Enhanced Calendar App</h1>
+    <div id="calendar">
+        <label for="date-input">Select a date:</label>
+        <input type="date" id="date-input">
+        <button id="set-notification">Set Notification</button>
+    </div>
+    <div id="notification"></div>
+
+    <script>
+        const setNotificationButton = document.getElementById('set-notification');
+        const notificationDiv = document.getElementById('notification');
+        const dateInput = document.getElementById('date-input');
+
+        // Request notification permission
+        function requestNotificationPermission() {
+            if (Notification.permission !== "granted") {
+                Notification.requestPermission().then(permission => {
+                    if (permission === "granted") {
+                        notificationDiv.textContent = "Notification permission granted!";
+                    } else {
+                        notificationDiv.textContent = "Notification permission denied.";
+                    }
+                });
+            }
+        }
+
+        // Function to create a notification
+        function createNotification(date) {
+            const notification = new Notification("Calendar Alert!", {
+                body: `It's ${date.toLocaleDateString()}!`,
+                icon: 'https://via.placeholder.com/150' // Placeholder icon
+            });
+        }
+
+        setNotificationButton.addEventListener('click', () => {
+            const selectedDate = new Date(dateInput.value);
+            const today = new Date();
+
+            // Check if date is valid and in the future
+            if (isNaN(selectedDate) || selectedDate < today) {
+                notificationDiv.textContent = 'Please select a valid future date.';
+                return;
+            }
+
+            // Set a timeout for the notification
+            const timeDifference = selectedDate - today;
+            const notificationTime = timeDifference > 0 ? timeDifference : 0;
+
+            // Notify user when the date arrives
+            setTimeout(() => {
+                createNotification(selectedDate);
+            }, notificationTime);
+
+            notificationDiv.textContent = `Notification set for ${selectedDate.toLocaleDateString()}.`;
+        });
+
+        // Request permission on page load
+        requestNotificationPermission();
+    </script>
+</body>
+</html>

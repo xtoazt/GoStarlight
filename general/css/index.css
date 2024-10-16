@@ -338,9 +338,9 @@ option{
 
 .partner {
     font-weight: 700;
-    background: rgba(44, 44, 44, 0.8); /* Semi-transparent white */
+    background: rgba(28, 28, 28, 0.8); /* Semi-transparent white */
     margin: 10px;
-    height: 500px;
+    height: 60%;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -349,7 +349,9 @@ option{
     opacity: 0;
     animation: fadeInUp 0.5s forwards;
 }
-
+.partner:hover{
+   transform: scale(1.05);
+}
 @keyframes fadeInUp {
     from { transform: translateY(20px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
@@ -457,15 +459,8 @@ option{
     font-family: 'Inter' sans-serif;
     font-weight: 700;
     color: white;
-    box-shadow: 0px 8px 24px rgba(15, 15, 15, 0.4);
-background-color: #171717;
-margin-left: 10%;
-margin-right: 10%;
-width: 80%;
-border-radius: 20px;
-padding: 30px;
-transition: all 0.5s ease; /* Slowed down the transition */
-margin-bottom: 50px;
+   margin: 40px;
+
   }
   a{
     text-decoration: none;

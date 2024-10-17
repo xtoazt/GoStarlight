@@ -622,15 +622,15 @@ option{
     width:330px;
   }
   #messageInput{
+    border-radius: 20px;
+    height: 80px;
+    width:330px;
     outline: none;
     color: white;
     padding: 20px;
     box-shadow: 0 0 10px   rgb(20, 20, 20);
     border: none;
-    background-color: rgb(65, 65, 65););
-    border-radius: 20px;
-    height: 80px;
-    width:330px;
+    background-color: rgb(65, 65, 65);
   }
   #forms{
     text-align: center;

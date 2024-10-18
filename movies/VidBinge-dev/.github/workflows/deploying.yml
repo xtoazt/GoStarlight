@@ -1,0 +1,24 @@
+name: Deploy Application
+
+on:
+  push:
+    branches:
+      - dev  # Triggers the workflow on pushes to the "dev" branch
+  workflow_dispatch: {}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up SSH key
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" | base64 --decode > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan -H server.wafflehacker.io >> ~/.ssh/known_hosts
+
+    - name: Deploy to server
+      run: ssh -i ~/.ssh/id_rsa root@server.wafflehacker.io "bash /home/vidbinge_project/deploy.sh ${{ github.sha }}"

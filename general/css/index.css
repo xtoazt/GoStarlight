@@ -677,3 +677,36 @@ margin-top: 5.208vw;
     transform: scale(1.1);
     cursor: pointer;
 }
+#shortcuts{
+    text-align: center;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+color: white;
+background-color: rgb(33, 33, 33);
+height: 300px;
+width: 70%;
+border-radius: 20px;
+cursor: pointer;
+border: none;
+padding: 10px;
+box-shadow: 0 0 10px rgb(40, 40, 40);
+flex-wrap: wrap;
+display: flex;
+}
+.imgs{
+    text-align: center;
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+}
+#buny{
+    background-color: rgb(21, 21, 21);
+    padding: 10px;
+    font-weight: 700;
+    position: relative;
+    width: 300px; /* Width of the square */
+    height: 300px; /* Height of the square */
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}

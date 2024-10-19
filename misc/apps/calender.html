@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Starlight - Calender</title>
+        <meta name="description" content=" Starlight is your all-in-one platform for utilities, hacks, games, and proxies, designed to enhance your online experience and unlock limitless possibilities!">
+        <link rel="icon" href="/img/starlight.png">
+        <meta name="keywords" content="starlight, proxy, unblocked, unblock, unblocked games, unblocking, proxies, starlight proxy">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Starlight">
+        <link rel="manifest" href="/manifest.json">
+        <!--css link here-->
+        <link rel="stylesheet" href="/general/css/index.css">
+        <!--js link here-->
+        <script src="/general/js/index.js"></script>
+        <script src="/serviceworker.js"></script>
+         <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-36EM66LHER"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-36EM66LHER');
+</script>
+<style>
+      .share-container {
+            position: relative;
+        }
+        .notification {
+            display: none;
+            position: absolute;
+            bottom: 80px; /* Adjusted for better visibility */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: white;
+            padding: 30px;
+            border-radius: 5px;
+            width: 300px; /* Set a fixed width for the notification */
+            text-align: center;
+            opacity: 0; /* Start hidden */
+            transition: opacity 0.5s ease; /* Smooth transition for fade */
+        }
+        .notification.show {
+            display: block; /* Show when needed */
+            opacity: 1; /* Fully visible */
+        }
+        .copy-button {
+            margin-left: 10px;
+            padding: 5px 10px;
+            background-color: #777777;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+     .container-iframe {
+       width:100%;
+   margin-left: 2vw;
+    max-width: 58.688vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 80px;
+  }
+  
+  .iframe-container {
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      width: 65vw;
+      height: 70vh;
+      overflow: hidden;
+  }
+  
+  iframe {
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      border: none;
+  }
+  
+  .controls {
+  gap:0.1px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 65vw;
+      height: 5vh;
+      background-color: #121212;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+  }
+    
+  .ad {
+  width: 18vw; /* Adjust width as needed */
+  height: 35vw; /* Adjust height as needed */
+  background-color: #202020;
+  border-radius: 0.5vw;
+  position: relative;
+  box-shadow: 0 0.313vw 0.625vw 0 rgba(30, 30, 30);
+  outline: 0.1vw solid #333;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin-left: 90.917vw;
+  margin-top: -37.854vw;
+  }
+    .adTXT{
+    font-weight:700;
+   color: rgb(124, 124, 124);
+    font-family:sans-serif;
+    }
+    .icon {
+    padding-bottom:20px;
+    padding:10px;
+        color: lightgrey;
+      margin-right: 15px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: color 0.3s;
+  }
+  
+  .icon:hover {
+      color: #ccc;
+  }
+    
+    .desc {
+    font-weight:700;
+    color: lightgrey;
+    font-family:sans-serif;
+  width: 62.5vw; /* Adjust width as needed */
+  background-color: #202020;
+  border-radius: 0.5vw;
+  box-shadow: 0 0.313vw 0.625vw 0 rgba(30, 30, 30, 0.5);
+  outline: 0.1vw solid #333;
+  padding: 1.042vw; /* Padding inside the container */
+  margin-left: 15.625vw;
+  margin-top: 5.208vw;
+  }
+  
+  
+</style>
+    </head>
+    <body>
+        <script src="/general/js/eruda.js"></script>
+        <script>eruda.init();</script>
+        <script src="/general/js/global.js"></script>
+        <div id="particles-js"></div>
+        <nav>
+            <a href="/general/index.html" class="left-link">Starlight</a>
+            <div class="nav-links">
+                <a href="/general/pages/arcade.html"><img src="/img/arcade.png" height="12px" width="12px">&nbsp;Arcade</a>
+                <a href="/general/pages/utilities.html"><img src="/img/apps.png" height="12px" width="12px">&nbsp;Utilities</a>
+                <a href="/general/pages/media.html"><img src="/img/movies.png" height="12px" width="12px">&nbsp;Media</a>
+                <a href="/general/pages/ai.html"><img src="/img/ai.png" height="12px" width="12px">&nbsp;AI</a>
+                <a href="/general/pages/search.html"><img src="/img/search.png" height="12px" width="12px">&nbsp;Search</a>
+                <a href="/general/pages/settings.html"><img src="/img/settings.png" height="12px" width="12px">&nbsp;Settings</a>
+            </div>
+        </nav>
+        <br>
+        <br>
+        <br>
+        
+  
+  <div class="container-iframe">
+    <div class="iframe-container">
+        <iframe id="iframe" name="iframe" src="/library/local-apps/calender.html"></iframe>
+    </div>
+
+    <div class="controls">
+   &nbsp;&nbsp;
+   <a onclick="toggleFullscreen()"><img src="/img/fullscreen.png" height="30" width="30" class="icon"> </a>
+   <a onclick="refreshIframe()"><img src="/img/reload.png" height="30" width="30" class="icon"> </a>
+   <div class="share-container">
+   <a id="share-button"><img src="/img/sharee.png" height="30" width="30" class="icon"> </a>
+     <div class="notification" id="notification">
+        <span id="link-text"></span>
+        <button class="copy-button" id="copy-button">Copy</button>
+    </div>
+    <a href="/library/local-apps/calender.html" target="_blank"><img src="/img/opendirect.png" height="30" width="30" class="icon"></a>
+</div>
+</div>
+
+<div class="ad">
+    <div class="adTXT">Ads open for sale</div>
+    <div class="script-container">
+       
+    </div>
+  
+    
+</div>
+             
+
+<div class="desc">
+  <h2 class="desc-title">Title</h2>
+  <p>Calender</p>
+    <h2 class="desc-title">Description</h2>
+  <p>Calender</p>
+    <h2 class="desc-title">Creator</h2>
+    <p>Infamy<p>
+    <h2 class="desc-title">Keybinds</h2>
+    <p>W,A,S,D, Custom Keys, Arrow keys</p>
+    <h2 class="desc-title">Devices</h2>
+    <p>Desktop, Mobile</p>
+    <h2 class="desc-title">Latest Update</h2>
+    <p>Oct 12th, 2024</p>
+</div>
+</div>
+    </body>
+</html><script src="/general/js/cloak.js"></script>
+    <!-- Include Particle.js library -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: {
+                    value: 200, // Number of particles
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: "#ffffff" // White particles to represent stars
+                },
+                shape: {
+                    type: "circle", // Circular particles
+                    stroke: {
+                        width: 0,
+                        color: "#000000"
+                    },
+                },
+                opacity: {
+                    value: 0.7, // Base opacity for brightness
+                    random: true, // Random opacity for blinking effect
+                    anim: {
+                        enable: false,
+                    }
+                },
+                size: {
+                    value: 3, // Size of particles
+                    random: true,
+                    anim: {
+                        enable: false,
+                    }
+                },
+                line_linked: {
+                    enable: false, // Disable connecting lines
+                },
+                move: {
+                    enable: true,
+                    speed: 5, // Slower speed for a more realistic flying effect
+                    direction: "none", // Particle movement direction
+                    random: true, // Random movement for a more dynamic effect
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false,
+                    attract: {
+                        enable: false,
+                    }
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: false, // Disable hover effect
+                    },
+                    onclick: {
+                        enable: false, // Disable click effect
+                    },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+     <script>
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+          e.preventDefault();
+          deferredPrompt = e;
+          // Show your custom install button
+        });
+        
+        </script>
+        <script src="/general/js/ai.js"></script>
+        <script src="/general/js/settings.js"></script>
+        <script src="/general/js/game.js"></script>

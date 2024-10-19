@@ -29,9 +29,8 @@ function displayMovies(results) {
 
         movieDiv.innerHTML = `
             <a href="#" onclick="loadDetail('${item.media_type}', '${item.title || item.name}')">
-                <h3>${item.title || item.name} (${new Date(item.release_date || item.first_air_date).getFullYear()})</h3>
                 <img src="https://image.tmdb.org/t/p/w500${item.poster_path}" alt="${item.title || item.name}">
-                <p>${item.overview}</p>
+                  <h4>${item.title || item.name} (${new Date(item.release_date || item.first_air_date).getFullYear()})</h4>
             </a>
         `;
         movieList.appendChild(movieDiv);
@@ -40,8 +39,8 @@ function displayMovies(results) {
 
 function loadDetail(mediaType, title) {
     const baseUrls = {
-        movie: "https://vidsrc.rip/embed/movie",
-        tv: "https://vidsrc.rip/embed/tv",
+        movie: "https://vidsrc.rip/embed/movie/",
+        tv: "https://vidsrc.rip/embed/tv/",
         vidlink: {
             movie: "https://vidlink.pro/movie/",
             tv: "https://vidlink.pro/tv/"

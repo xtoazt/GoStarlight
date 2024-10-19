@@ -677,36 +677,85 @@ margin-top: 5.208vw;
     transform: scale(1.1);
     cursor: pointer;
 }
-#shortcuts{
-    text-align: center;
-    font-weight: 700;
-    font-family: 'Inter', sans-serif;
-color: white;
-background-color: rgb(33, 33, 33);
-height: 300px;
-width: 70%;
-border-radius: 20px;
-cursor: pointer;
-border: none;
-padding: 10px;
-box-shadow: 0 0 10px rgb(40, 40, 40);
-flex-wrap: wrap;
-display: flex;
-}
-.imgs{
-    text-align: center;
-    height: 200px;
-    width: 200px;
-    border-radius: 20px;
-}
-#buny{
-    background-color: rgb(21, 21, 21);
-    padding: 10px;
-    font-weight: 700;
-    position: relative;
-    width: 300px; /* Width of the square */
-    height: 300px; /* Height of the square */
-    overflow: hidden;
+
+.quicklink-button {
+    width: 90px;
+    height: 110px;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+    color: white;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
+    padding: 8px;
+    border: none;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
+    text-transform: capitalize;
+    position: relative;
+    transition: background-color 0.5s ease;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .quicklink-button:hover {
+    background-color: #202020;
+  }
+  
+  .quicklink-button img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .quicklink-button p {
+    margin: 0;
+    font-size: 12px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .quicklink-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10px;
+    gap: 8px;
+    font-family: 'Inter', sans-serif;
+  }
+  #movies-button{
+   background-color: #2f2f2f;
+   border: none;
+   padding: 10px;
+   height: 40px;
+   width: 100px;
+   color: white;
+   font-family: 'Inter', sans-serif;
+   border-radius: 8px;
+   transition: all 0.5 ease;
+   box-shadow: 0px 0px 10px #2f2f2f;
+  }
+  #movies-button:hover{
+    transform: translateY(-3px);
+  }
+  #movies-search{
+    outline: none;
+    background-color: #2f2f2f;
+    border: none;
+    padding: 10px;
+    height: 40px;
+    width: 60%;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    border-radius: 8px;
+    transition: all 0.5 ease;
+    box-shadow: 0px 0px 10px #2f2f2f;
+  }
+  #movies-search{
+    box-shadow: 0px 0px 10px #404040;
+    border-radius: 12px;
+    transform: translateY(-5px);
+  }

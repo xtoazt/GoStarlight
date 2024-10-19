@@ -28,7 +28,7 @@ function displayMovies(results) {
         }
 
         movieDiv.innerHTML = `
-            <a href="${linkUrl}" target="_blank">
+            <a href="#" onclick="loadDetail('${item.media_type}', '${item.title || item.name}')">
                 <h3>${item.title || item.name} (${new Date(item.release_date || item.first_air_date).getFullYear()})</h3>
                 <img src="https://image.tmdb.org/t/p/w500${item.poster_path}" alt="${item.title || item.name}">
                 <p>${item.overview}</p>
@@ -36,4 +36,24 @@ function displayMovies(results) {
         `;
         movieList.appendChild(movieDiv);
     });
+}
+
+function loadDetail(mediaType, title) {
+    const baseUrls = {
+        movie: "https://vidsrc.rip/embed/movie",
+        tv: "https://vidsrc.rip/embed/tv",
+        vidlink: {
+            movie: "https://vidlink.pro/movie/",
+            tv: "https://vidlink.pro/tv/"
+        }
+    };
+
+    const vidsrcUrl = baseUrls[mediaType] || baseUrls.movie;
+    const vidlinkUrl = baseUrls.vidlink[mediaType] || baseUrls.vidlink.movie;
+
+    // You can choose which URL to pass to detail.html; here, we will use vidsrcUrl as an example
+    const selectedUrl = vidsrcUrl;
+
+    // Redirect to the detail page with the selected URL
+    window.location.href = `/movies/detail.html?url=${encodeURIComponent(selectedUrl)}`;
 }

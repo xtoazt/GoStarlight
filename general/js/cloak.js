@@ -16,7 +16,7 @@ if (url) {
       win.document.title = "Google";
       var link = win.document.createElement('link');
       link.rel = 'icon';
-      link.href = 'https://starlight-phi.vercel.app/img/favicons/google.webp'; // Google favicon
+      link.href = 'https://starlight-phi.vercel.app/img/images/icons/google.ico'; // Google favicon
       win.document.head.appendChild(link);
 
       var iframe = win.document.createElement('iframe');

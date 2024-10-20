@@ -54,5 +54,5 @@ function loadDetail(mediaType, title) {
     const selectedUrl = vidsrcUrl;
 
     // Redirect to the detail page with the selected URL
-    window.location.href = `/movies/detail.html?url=${encodeURIComponent(selectedUrl)}`;
+    window.location.href = `/storage/movies.html?url=${encodeURIComponent(selectedUrl)}`;
 }

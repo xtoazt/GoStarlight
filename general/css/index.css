@@ -149,7 +149,7 @@ transition: all 0.3s ease;
         transform: translateY(-3px); /* Slightly increased upward movement */
         border-radius: 30px;
     width: 55%;
-    box-shadow: 0 0 10px rgb(177, 177, 177);
+    box-shadow: 0 0 10px rgb(81, 81, 81);
     border: none;
     }
 #uv-address:focus{

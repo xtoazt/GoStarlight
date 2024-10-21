@@ -20,17 +20,10 @@ function displayMovies(results) {
         const movieDiv = document.createElement('div');
         movieDiv.classList.add('movie');
 
-        let linkUrl = '';
-        if (item.media_type === 'movie') {
-            linkUrl = `https://moviesapi.club/movie/${item.id}`;
-        } else if (item.media_type === 'tv') {
-            linkUrl = `https://moviesapi.club/tv/${item.id}`;
-        }
-
         movieDiv.innerHTML = `
             <a href="#" onclick="loadDetail('${item.media_type}', '${item.title || item.name}')">
                 <img src="https://image.tmdb.org/t/p/w500${item.poster_path}" alt="${item.title || item.name}">
-                  <h4 class="description">${item.title || item.name} (${new Date(item.release_date || item.first_air_date).getFullYear()})</h4>
+                <h4 class="description">${item.title || item.name} (${new Date(item.release_date || item.first_air_date).getFullYear()})</h4>
             </a>`;
         movieList.appendChild(movieDiv);
     });
@@ -39,19 +32,11 @@ function displayMovies(results) {
 function loadDetail(mediaType, title) {
     const baseUrls = {
         movie: "https://vidsrc.rip/embed/movie/",
-        tv: "https://vidsrc.rip/embed/tv/",
-        vidlink: {
-            movie: "https://vidlink.pro/movie/",
-            tv: "https://vidlink.pro/tv/"
-        }
+        tv: "https://vidsrc.rip/embed/tv/"
     };
 
-    const vidsrcUrl = baseUrls[mediaType] || baseUrls.movie;
-    const vidlinkUrl = baseUrls.vidlink[mediaType] || baseUrls.vidlink.movie;
+    const selectedUrl = baseUrls[mediaType] || baseUrls.movie;
 
-    // You can choose which URL to pass to detail.html; here, we will use vidsrcUrl as an example
-    const selectedUrl = vidsrcUrl;
-
-    // Redirect to the detail page with the selected URL
+    // Redirect to the detail page without appending the movie ID
     window.location.href = `/storage/movies.html?url=${encodeURIComponent(selectedUrl)}`;
 }

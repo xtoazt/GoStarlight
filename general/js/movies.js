@@ -21,7 +21,7 @@ function displayMovies(results) {
         movieDiv.classList.add('movie');
 
         movieDiv.innerHTML = `
-            <a href="#" onclick="loadDetail('${item.media_type}', '${item.title || item.name}')">
+            <a href="#" onclick="loadDetail('${item.media_type}')">
                 <img src="https://image.tmdb.org/t/p/w500${item.poster_path}" alt="${item.title || item.name}">
                 <h4 class="description">${item.title || item.name} (${new Date(item.release_date || item.first_air_date).getFullYear()})</h4>
             </a>`;
@@ -29,7 +29,7 @@ function displayMovies(results) {
     });
 }
 
-function loadDetail(mediaType, title) {
+function loadDetail(mediaType) {
     const baseUrls = {
         movie: "https://vidsrc.rip/embed/movie/",
         tv: "https://vidsrc.rip/embed/tv/"
@@ -37,6 +37,6 @@ function loadDetail(mediaType, title) {
 
     const selectedUrl = baseUrls[mediaType] || baseUrls.movie;
 
-    // Redirect to the detail page without appending the movie ID
+    // Redirect to the detail page with the selected URL
     window.location.href = `/storage/movies.html?url=${encodeURIComponent(selectedUrl)}`;
 }

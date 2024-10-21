@@ -40,22 +40,6 @@ saveTitleFaviconButton.addEventListener('click', () => {
     localStorage.setItem('favicon', newFavicon);
 });
 
-const bgColorInput = document.getElementById('bgColorInput');
-const saveBgColorButton = document.getElementById('saveBgColorButton');
-const resetBgColorButton = document.getElementById('resetBgColorButton');
-
-saveBgColorButton.addEventListener('click', () => {
-    const newBgColor = bgColorInput.value;
-    document.body.style.backgroundColor = newBgColor;
-    localStorage.setItem('bgColor', newBgColor);
-});
-
-resetBgColorButton.addEventListener('click', () => {
-    document.body.style.backgroundColor = '#171717'; // Reset to default color
-    bgColorInput.value = '#f4f4f4'; // Reset input value
-    localStorage.removeItem('bgColor'); // Remove from local storage
-});
-
 const faviconSelectInput = document.getElementById('faviconSelectInput');
 const saveFaviconSelectButton = document.getElementById('saveFaviconSelectButton');
 

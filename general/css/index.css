@@ -25,7 +25,7 @@ body {
     font-size: 3em; /* Large font size for the welcome message */
     opacity: 0; /* Start with invisible text */
     animation: textFadeIn 3s forwards; /* Fade-in animation for text */
-    z-index: 2; /* Ensure text is above the particles */
+    z-index: 1; /* Ensure text is above the particles */
     position: relative; /* Position relative to the navbar */
     margin-top: 100px; /* Space below the navbar */
 }
@@ -65,7 +65,7 @@ nav {
     color: white; /* Text color */
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for lift effect and shadow */
-    z-index:1; /* Ensure navbar is above the particles */
+    z-index:2; /* Ensure navbar is above the particles */
     border-radius: 20px; /* Add rounded corners */
     display: flex; /* Use flexbox for layout */
     justify-content: space-between; /* Space items evenly */
@@ -149,7 +149,7 @@ transition: all 0.3s ease;
         transform: translateY(-3px); /* Slightly increased upward movement */
         border-radius: 30px;
     width: 55%;
-    box-shadow: 0 0 10px rgb(81, 81, 81);
+    box-shadow: 0 0 10px rgb(50, 50, 50);
     border: none;
     }
 #uv-address:focus{

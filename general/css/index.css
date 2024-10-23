@@ -340,7 +340,7 @@ option{
     font-weight: 700;
     background: rgba(28, 28, 28, 0.8); /* Semi-transparent white */
     margin: 10px;
-    height: 550px;
+    height: 500px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -404,7 +404,7 @@ option{
  
  .text:hover {
     font-weight: 700;
-    transform: translateY(-5%) scale(1.03);
+    transform: translateY(-5%) scale(1.02);
  }
 
   #container {
@@ -725,4 +725,52 @@ margin-top: 5.208vw;
     margin-top: -10px;
     gap: 8px;
     font-family: 'Inter', sans-serif;
+  }
+  .toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  .toggle-container label {
+    font-size: 14px;
+  }
+  .toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+  }
+  .toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  input:checked + .slider {
+    background-color: #4CAF50;
+  }
+  input:checked + .slider:before {
+    transform: translateX(20px);
   }

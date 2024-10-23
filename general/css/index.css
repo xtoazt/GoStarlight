@@ -760,8 +760,8 @@ margin-top: 5.208vw;
   .slider:before {
     position: absolute;
     content: "";
-    height: 12px;
-    width: 12px;
+    height: 36px;
+    width: 36px;
     left: 4px;
     bottom: 4px;
     background-color: white;
@@ -772,5 +772,5 @@ margin-top: 5.208vw;
     background-color: #4CAF50;
   }
   input:checked + .slider:before {
-    transform: translateX(20px);
+    transform: translateX(60px);
   }

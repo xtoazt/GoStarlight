@@ -1,4 +1,4 @@
-const apiKey = ' '; // Replace with your TMDB API key
+const apiKey = '1070730380f5fee0d87cf0382670b255'; // Replace with your TMDB API key
 let selectedShowId = null;
 
 document.getElementById('searchButton').addEventListener('click', async () => {

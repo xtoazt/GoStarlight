@@ -57,7 +57,7 @@ let selectedShowId = null;
         document.getElementById('popularTVShows').innerHTML = '';
         document.getElementById('featured').innerHTML = '';
 
-        const query = document.getElementById('searchInput').value;
+        const query = document.getElementById('search').value;
         const movieResponse = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}`);
         const tvResponse = await fetch(`https://api.themoviedb.org/3/search/tv?api_key=${apiKey}&query=${query}`);
         

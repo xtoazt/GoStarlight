@@ -747,6 +747,10 @@ margin-top: 5.208vw;
     height: 0;
   }
   .slider {
+    align-items: center;
+    text-align: center;
+    height: 40px;
+    width: 120px;
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -760,8 +764,8 @@ margin-top: 5.208vw;
   .slider:before {
     position: absolute;
     content: "";
-    height: 108px;
-    width: 108px;
+   height: 37px;
+   width:37px;
     left: 4px;
     bottom: 4px;
     background-color: white;

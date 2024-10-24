@@ -21,7 +21,7 @@ document.getElementById('searchButton').addEventListener('click', async () => {
 });
 
 function displayResults(items, type, containerId) {
-    const resultsDiv = document.getElementById(containerId);
+    const resultsDiv = document.getElementById(results);
     resultsDiv.innerHTML = ''; // Clear previous results
 
     items.forEach(item => {

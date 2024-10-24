@@ -8,9 +8,6 @@ window.onload = async () => {
 
 document.getElementById('searchButton').addEventListener('click', async () => {
     // Clear previous search results
-    document.getElementById('popularMovies').innerHTML = '';
-    document.getElementById('popularTVShows').innerHTML = '';
-
     const query = document.getElementById('search').value;
     const movieResponse = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}`);
     const tvResponse = await fetch(`https://api.themoviedb.org/3/search/tv?api_key=${apiKey}&query=${query}`);

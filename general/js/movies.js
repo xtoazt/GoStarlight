@@ -1,29 +1,21 @@
 const apiKey = '1070730380f5fee0d87cf0382670b255'; // Replace with your TMDB API key
 let selectedShowId = null;
 
-// Fetch popular movies and TV shows on page load
-window.onload = async () => {
-    // No initial fetch calls
-};
-
 document.getElementById('searchButton').addEventListener('click', async () => {
-    // Clear previous search results
-    document.getElementById('search').innerHTML = ''; // Ensure this container exists in your HTML
-
-    const query = document.getElementById('search').value;
+    const query = document.getElementById('searchInput').value;
     const movieResponse = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}`);
     const tvResponse = await fetch(`https://api.themoviedb.org/3/search/tv?api_key=${apiKey}&query=${query}`);
     
     const movieData = await movieResponse.json();
     const tvData = await tvResponse.json();
-
-    // Display search results
+    
     displayResults(movieData.results, 'Movie');
     displayResults(tvData.results, 'TV Show');
 });
 
 function displayResults(items, type) {
-    const resultsDiv = document.getElementById('searchResults');
+    const resultsDiv = document.getElementById('results');
+
     items.forEach(item => {
         const itemDiv = document.createElement('div');
         itemDiv.classList.add('item');
@@ -49,7 +41,7 @@ document.getElementById('closePopup').addEventListener('click', () => {
     const episode = document.getElementById('episodeInput').value;
 
     if (season && episode) {
-        window.location.href = `/storage/movies.html?tmdb_id=${selectedShowId}&type=TV Show&season=${season}&episode=${episode}`;
+        window.location.href = "/storage/movies.html?tmdb_id=${selectedShowId}&type=TV Show&season=${season}&episode=${episode}`;
     } else {
         alert("Please enter both season and episode numbers.");
     }

@@ -747,10 +747,11 @@ margin-top: 5.208vw;
     height: 0;
   }
   .slider {
+    padding: 5px;
     align-items: center;
     text-align: center;
     height: 40px;
-    width: 120px;
+    width: 100px;
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -776,5 +777,5 @@ margin-top: 5.208vw;
     background-color: #4CAF50;
   }
   input:checked + .slider:before {
-    transform: translateX(20px);
+    transform: translateX(100px);
   }

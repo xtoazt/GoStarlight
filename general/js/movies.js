@@ -41,7 +41,7 @@ document.getElementById('closePopup').addEventListener('click', () => {
     const episode = document.getElementById('episodeInput').value;
 
     if (season && episode) {
-        window.location.href = "/storage/movies.html?tmdb_id=${selectedShowId}&type=TV Show&season=${season}&episode=${episode}`;
+        window.location.href =`/storage/movies.html?tmdb_id=${selectedShowId}&type=TV Show&season=${season}&episode=${episode}`;
     } else {
         alert("Please enter both season and episode numbers.");
     }

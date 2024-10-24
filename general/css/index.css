@@ -374,6 +374,11 @@ option{
     padding: 10px;
     flex-grow: 1; /* Allow chat box to grow */
     border-radius: 10px; /* Rounded corners for chat box */
+    transition: all 0.5s ease;
+}
+#chat-box{
+    transform: translateY(-2px);
+    box-shadow: 0 2px 10px rgb(69, 69, 69);
 }
 #user-input {
     box-shadow: 0 2px 10px rgb(61, 61, 61);
@@ -385,6 +390,17 @@ option{
     color: #ffffff; /* Input text color */
     border-radius: 4px; /* Rounded corners */
     margin: 10px 0; /* Margin for spacing */
+    transition: all 0.5s ease;
+}
+#user-input:hover{
+    box-shadow: 0 2px 10px rgb(80, 80, 80);
+    transform: translateY(-5px);
+
+}
+#user-input:focus{
+    box-shadow: 0 2px 10px rgb(80, 80, 80);
+    transform: translateY(-5px);
+
 }
 #send-button {
     box-shadow: 0 2px 10px rgb(61, 61, 61);
@@ -395,6 +411,11 @@ option{
     color: #ffffff; /* Button text color */
     cursor: pointer;
     border-radius: 4px; /* Rounded corners */
+    transition: all 0.5s ease;
+}
+#send-button:hover{
+    box-shadow: 0 2px 10px rgb(80, 80, 80);
+    transform: translateY(-5px);
 }
 .text {
     font-weight: 700;
@@ -746,36 +767,4 @@ margin-top: 5.208vw;
     width: 0;
     height: 0;
   }
-  .slider {
-    padding: 5px;
-    align-items: center;
-    text-align: center;
-    height: 40px;
-    width: 100px;
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-    border-radius: 34px;
-  }
-  .slider:before {
-    position: absolute;
-    content: "";
-   height: 37px;
-   width:37px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: .4s;
-    border-radius: 50%;
-  }
-  input:checked + .slider {
-    background-color: #4CAF50;
-  }
-  input:checked + .slider:before {
-    transform: translateX(100px);
-  }
+  

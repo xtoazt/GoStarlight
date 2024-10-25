@@ -28,7 +28,6 @@ body {
     z-index: 1; /* Ensure text is above the particles */
     position: relative; /* Position relative to the navbar */
     margin-top: 100px; /* Space below the navbar */
-    display: inline-block;
 }
 
 @keyframes textFadeIn {

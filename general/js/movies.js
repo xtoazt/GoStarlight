@@ -15,6 +15,9 @@ document.getElementById('searchButton').addEventListener('click', async () => {
 
 function displayResults(items, type) {
     const resultsDiv = document.getElementById('results');
+    
+    // Clear previous results
+    resultsDiv.innerHTML = '';
 
     items.forEach(item => {
         const itemDiv = document.createElement('div');
@@ -41,7 +44,7 @@ document.getElementById('closePopup').addEventListener('click', () => {
     const episode = document.getElementById('episodeInput').value;
 
     if (season && episode) {
-        window.location.href =`/storage/movies.html?tmdb_id=${selectedShowId}&type=TV Show&season=${season}&episode=${episode}`;
+        window.location.href = `/storage/movies.html?tmdb_id=${selectedShowId}&type=TV Show&season=${season}&episode=${episode}`;
     } else {
         alert("Please enter both season and episode numbers.");
     }

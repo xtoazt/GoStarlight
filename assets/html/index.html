@@ -8,9 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Starlight">
         <link rel="manifest" href="/manifest.json">
-        <!--css link here-->
         <link rel="stylesheet" href="/general/css/index.css">
-        <!--js link here-->
         <script src="/general/js/index.js"></script>
         <script src="/serviceworker.js"></script>
          <!-- Google tag (gtag.js) -->
@@ -24,9 +22,8 @@
 </script>
     </head>
     <body>
-     
-        <script src="/general/js/global.js"></script>
-
+<script src="/general/js/quotes.js"></script>
+<script src="/general/js/global.js"></script>
 <script src="/general/js/eruda.js"></script>
 <script>eruda.init();</script>
         <div id="particles-js"></div>
@@ -150,55 +147,6 @@
         retina_detect: true
     });
 </script>
-
-    <script>
-let splashtext = [
-    'Made by Infamy/enterheadlines',
-    'Join our discord fr',
-    'zoo wee mama',
-    'im cool now that i made this site',
-    'most basic ubg site ever',
-    'Entertopia is ass compared to this',
-    'these games are so good',
-    'very lightweight site(for now)',
-    'this is closed source (for now)',
-    'anyone who says this site is ass is lying',
-    'tell this site to everyone you know',
-    'fein fein fein',
-    'ADS OPEN FOR SALE PLEASE BUY',
-    'youtube is unblocked for me',
-    'you found secret 1',
-    'im in the thick of it',
-    'everybody knows',
-    'they know me where it snows',
-    'i skied in and they froze',
-    'I dont know no nothing bout no ice im just cold',
-    'Forty something milli subs or so, Ive been told',
-    'from the screen to the ring to the pen to the king',
-    'wheres my crown thats my bling',
-    'always drama when i ring'
-];
-
-// Function to change text
-function changeSplashText() {
-    document.getElementById('splash').innerText = splashtext[Math.floor(Math.random() * splashtext.length)];
-}
-
-// Initial call to set the text immediately
-changeSplashText();
-
-// Change the text every 5 seconds (5000 milliseconds)
-setInterval(changeSplashText, 5000);
-
-     </script>
-     <script>
-        let deferredPrompt;
-        window.addEventListener('beforeinstallprompt', (e) => {
-          e.preventDefault();
-          deferredPrompt = e;
-          // Show your custom install button
-        });
-        
-        </script>
+   
                 <script src="/general/js/settings.js"></script>
              

@@ -5,7 +5,7 @@
     "display": "standalone",
     "icons": [
       {
-        "src": "/img/starlight.png",
+        "src": "/assets/images/offical/starlight.png",
         "sizes": "192x192",
         "type": "image/png"
       }

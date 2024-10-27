@@ -1,4 +1,5 @@
 # Starlight: Your Gateway to Unlimited Possibilities!
+<img src="/assets/images/offical/starlightbanner.png">
 Starlight is your all-in-one platform for utilities, hacks, games, and proxies, enhancing your online experience!
 ## Features
  - 20+ Games

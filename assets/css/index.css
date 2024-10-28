@@ -12,7 +12,7 @@ body {
     font-family: 'Inter', sans-serif;
     color: #ffffff; /* White text color */
     opacity: 0; /* Start with invisible text */
-    animation: linear-gradient 8s ease, fadeIn 2s forwards; /* Fade-in animation for the page */
+    animation: gradient 8s ease, fadeIn 2s forwards; /* Fade-in animation for the page */
 }
 @keyframes gradient {
 	0% {

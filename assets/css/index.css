@@ -3,12 +3,16 @@
 body {
     user-select: none;
     margin: 0;
-    background-color: #171717; /* Dark background */
+    background: linear-gradient(-45deg, #1c1c1c, #343434, #3232327a, #1d1d1d);
     height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
     font-family: 'Inter', sans-serif;
     color: #ffffff; /* White text color */
     opacity: 0; /* Start with invisible text */
-    animation: fadeIn 2s forwards; /* Fade-in animation for the page */
+    animation: gradient 8s ease, fadeIn 2s forwards; /* Fade-in animation for the page */
 }
 
 @keyframes fadeIn {

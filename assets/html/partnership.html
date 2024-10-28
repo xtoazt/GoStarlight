@@ -45,9 +45,11 @@
 </script>
     </head>
     <body>
-        <script src="/general/js/eruda.js"></script>
+        <script src="/assets/js/particlecode.js"></script>
+        <script src="/assets/js/particles.js"></script>
+        <script src="/assets/js/global.js"></script>
+        <script src="/assets/js/eruda.js"></script>
         <script>eruda.init();</script>
-        <script src="/general/js/global.js"></script>
         <div id="particles-js"></div>
         <nav>
             <a href="/assets/html/index.html" class="left-link">Starlight</a>
@@ -91,73 +93,7 @@
     </body>
     <script src="/general/js/cloak.js"></script>
 </html>
-    <!-- Include Particle.js library -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-        particlesJS("particles-js", {
-            particles: {
-                number: {
-                    value: 200, // Number of particles
-                    density: {
-                        enable: true,
-                        value_area: 800
-                    }
-                },
-                color: {
-                    value: "#ffffff" // White particles to represent stars
-                },
-                shape: {
-                    type: "circle", // Circular particles
-                    stroke: {
-                        width: 0,
-                        color: "#000000"
-                    },
-                },
-                opacity: {
-                    value: 0.7, // Base opacity for brightness
-                    random: true, // Random opacity for blinking effect
-                    anim: {
-                        enable: false,
-                    }
-                },
-                size: {
-                    value: 3, // Size of particles
-                    random: true,
-                    anim: {
-                        enable: false,
-                    }
-                },
-                line_linked: {
-                    enable: false, // Disable connecting lines
-                },
-                move: {
-                    enable: true,
-                    speed: 5, // Slower speed for a more realistic flying effect
-                    direction: "none", // Particle movement direction
-                    random: true, // Random movement for a more dynamic effect
-                    straight: false,
-                    out_mode: "out",
-                    bounce: false,
-                    attract: {
-                        enable: false,
-                    }
-                }
-            },
-            interactivity: {
-                detect_on: "canvas",
-                events: {
-                    onhover: {
-                        enable: false, // Disable hover effect
-                    },
-                    onclick: {
-                        enable: false, // Disable click effect
-                    },
-                    resize: true
-                }
-            },
-            retina_detect: true
-        });
-    </script>
+  
  
      <script>
         let deferredPrompt;

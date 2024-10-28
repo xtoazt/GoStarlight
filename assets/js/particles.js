@@ -1,63 +1,110 @@
 particlesJS("particles-js", {
-    particles: {
-        number: {
-            value: 200, // Number of particles
-            density: {
-                enable: true,
-                value_area: 800
+        "particles": {
+          "number": {
+            "value": 160,
+            "density": {
+              "enable": true,
+              "value_area": 800
             }
-        },
-        color: {
-            value: "#ffffff" // White particles to represent stars
-        },
-        shape: {
-            type: "circle", // Circular particles
-            stroke: {
-                width: 0,
-                color: "#000000"
+          },
+          "color": {
+            "value": "#ffffff"
+          },
+          "shape": {
+            "type": "circle",
+            "stroke": {
+              "width": 0,
+              "color": "#000000"
             },
-        },
-        opacity: {
-            value: 0.7, // Base opacity for brightness
-            random: true, // Random opacity for blinking effect
-            anim: {
-                enable: false,
-            }
-        },
-        size: {
-            value: 3, // Size of particles
-            random: true,
-            anim: {
-                enable: false,
-            }
-        },
-        line_linked: {
-            enable: false, // Disable connecting lines
-        },
-        move: {
-            enable: true,
-            speed: 5, // Slower speed for a more realistic flying effect
-            direction: "none", // Particle movement direction
-            random: true, // Random movement for a more dynamic effect
-            straight: false,
-            out_mode: "out",
-            bounce: false,
-            attract: {
-                enable: false,
-            }
-        }
-    },
-    interactivity: {
-        detect_on: "canvas",
-        events: {
-            onhover: {
-                enable: false, // Disable hover effect
+            "polygon": {
+              "nb_sides": 5
             },
-            onclick: {
-                enable: false, // Disable click effect
+            "image": {
+              "src": "img/github.svg",
+              "width": 100,
+              "height": 100
+            }
+          },
+          "opacity": {
+            "value": 1,
+            "random": true,
+            "anim": {
+              "enable": true,
+              "speed": 2.426163749878691,
+              "opacity_min": 0,
+              "sync": false
+            }
+          },
+          "size": {
+            "value": 3,
+            "random": true,
+            "anim": {
+              "enable": false,
+              "speed": 4,
+              "size_min": 0.3,
+              "sync": false
+            }
+          },
+          "line_linked": {
+            "enable": false,
+            "distance": 150,
+            "color": "#ffffff",
+            "opacity": 0.4,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 7.991880249666342,
+            "direction": "top",
+            "random": true,
+            "straight": true,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+              "enable": false,
+              "rotateX": 10000,
+              "rotateY": 4875.046952296469
+            }
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": {
+              "enable": true,
+              "mode": "bubble"
             },
-            resize: true
-        }
-    },
-    retina_detect: true
+            "onclick": {
+              "enable": true,
+              "mode": "repulse"
+            },
+            "resize": true
+          },
+          "modes": {
+            "grab": {
+              "distance": 400,
+              "line_linked": {
+                "opacity": 1
+              }
+            },
+            "bubble": {
+              "distance": 250,
+              "size": 0,
+              "duration": 2,
+              "opacity": 0,
+              "speed": 3
+            },
+            "repulse": {
+              "distance": 400,
+              "duration": 0.4
+            },
+            "push": {
+              "particles_nb": 4
+            },
+            "remove": {
+              "particles_nb": 2
+            }
+          }
+        },
+        "retina_detect": true
 });

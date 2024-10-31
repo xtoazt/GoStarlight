@@ -29,7 +29,7 @@ function displayResults(items, type) {
                 selectedShowId = item.id; // Store the selected show ID
                 document.getElementById('popup').style.display = 'flex'; // Show the popup
             } else {
-                window.location.href = `/storage/movies.html?tmdb_id=${item.id}&type=${type}`;
+                window.location.href = `/assets/storage/movies.html?tmdb_id=${item.id}&type=${type}`;
             }
         });
         resultsDiv.appendChild(itemDiv);

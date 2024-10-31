@@ -11,7 +11,7 @@ canvas {
 body {
     user-select: none;
     margin: 0;
-    background: linear-gradient(-45deg, #1c1c1c, #121212);
+    background: linear-gradient(-45deg, #1c1c1c, #1a1a1a);
     height: 100vh;
     background-repeat: no-repeat;
     background-attachment: fixed;

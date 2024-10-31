@@ -18,7 +18,7 @@ body {
     background-attachment: fixed;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: #ffffff; /* White text color */
     opacity: 0; /* Start with invisible text */
     animation:fadeIn 2s forwards; /* Fade-in animation for the page */

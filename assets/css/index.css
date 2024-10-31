@@ -48,9 +48,8 @@ body {
     }
 }
 #splash{
-
     user-select: none;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
 text-align: center;
 font-weight: 700;
 font-size: 2em;
@@ -64,7 +63,7 @@ color: #949494;
     }
     
 nav {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 15px;
     font-weight: 700;
     position: fixed; /* Fix the navbar at the top */
@@ -172,7 +171,7 @@ box-shadow: 0 0 10px rgb(177, 177, 177);
 border: none;
 }
 .button{
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     box-shadow: 0 0 10px rgb(40, 40, 40);
     background-color: #202020;
@@ -350,9 +349,9 @@ option{
 
 .partner {
     font-weight: 700;
-    background: rgba(28, 28, 28, 0.8); /* Semi-transparent white */
+   background-color: #262626;
     margin: 10px;
-    height: 500px;
+    height: 450px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);

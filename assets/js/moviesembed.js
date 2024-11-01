@@ -6,7 +6,7 @@ const episode = urlParams.get('episode');
 const mediaFrame = document.getElementById('iframe');
 
 if (type === 'TV Show' && season && episode) {
-    mediaFrame.src = `https://vidlink.pro/tv/${tmdbId}/${season}/${episode}`;
+    mediaFrame.src = `https://vidbinge.dev/embed/tv/${tmdbId}/${season}/${episode}`;
 } else {
-    mediaFrame.src = `https://vidlink.pro/movie/${tmdbId}`;
+    mediaFrame.src = `https://vidbinge.dev/embed/movie/${tmdbId}`;
 }

@@ -2,7 +2,9 @@ const chatBox = document.getElementById('chat-box');
 const userInput = document.getElementById('user-input');
 const sendButton = document.getElementById('send-button');
 
-const apiKey = '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';
+const config = require('/config.js'); // Adjust the path if necessary
+
+const apiKey = config.apiKey;
 
 async function sendMessage() {
     const userMessage = userInput.value.trim();

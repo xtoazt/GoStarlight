@@ -72,8 +72,7 @@ nav {
     transform: translateX(-50%); /* Offset the navbar by 50% of its own width */
     width: 80%; 
     padding: 20px; /* Padding for the navbar */
-    background-color: rgba(10, 10, 10, 0.7);    
-  backdrop-filter: blur(5px);
+    background-color: #1b1b1be4; /* Dark background */
     color: white; /* Text color */
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for lift effect and shadow */
@@ -201,7 +200,7 @@ border: none;
     }
     #type:hover{
         transform: translateY(-3px);     
-        box-shadow: 0px 12px 36px rgba(19, 19, 19, 0.5); /* Slightly increase shadow on lift */
+        box-shadow: 0px 12px 36px rgba(25, 25, 25, 0.5); /* Slightly increase shadow on lift */
     }
     .row {
         margin: 30px;
@@ -265,8 +264,7 @@ display: none;
 .search-bar input {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     outline: none;
-    background-color: rgba(10, 10, 10, 0.5);    
-    backdrop-filter: blur(5px);
+    background-color: #1d1d1d; /* Dark background */
 	width: 50%;
 	padding: 10px;
 	border: none;
@@ -287,8 +285,7 @@ display: none;
 .search-bar button {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     font-family: 'Montserrat', sans-serif;
-    background-color: rgba(10, 10, 10, 0.5);    
-    backdrop-filter: blur(5px);
+    background-color: #1d1d1d; /* Dark background */
 	padding: 10px 20px;
 	margin-left: 10px;
 	border: none;
@@ -304,8 +301,7 @@ display: none;
 	background-color: #606060;
 }
 select{
-    background-color: rgba(10, 10, 10, 0.5);    
-    backdrop-filter: blur(5px);
+    background-color: #1d1d1d; /* Dark background */
 	border: none;
 	color: white;
 	border-radius: 10px;

@@ -49,3 +49,9 @@
         var ifr = document.getElementsByName('iframe')[0];
         ifr.src = ifr.src;
     }
+
+    document.getElementById('opendirect').addEventListener('click', () => {
+      const iframe = document.getElementById('iframe');
+      const currentUrl = iframe.src; // Get the current URL of the iframe
+      window.location.href = currentUrl; // Redirect the entire page to that URL
+  });

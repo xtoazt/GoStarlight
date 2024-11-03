@@ -11,9 +11,9 @@ const creatorElement = document.getElementById('desc-creator');
 async function fetchMediaDetails() {
     let detailsResponse;
     if (type === 'TV Show') {
-        detailsResponse = await fetch(`https://api.themoviedb.org/3/tv/${tmdbId}?api_key=${apiKey}`);
+        detailsResponse = await fetch(`https://api.themoviedb.org/3/tv/${tmdbId}?api_key=1070730380f5fee0d87cf0382670b255`);
     } else {
-        detailsResponse = await fetch(`https://api.themoviedb.org/3/movie/${tmdbId}?api_key=${apiKey}`);
+        detailsResponse = await fetch(`https://api.themoviedb.org/3/movie/${tmdbId}?api_key=1070730380f5fee0d87cf0382670b255`);
     }
     
     const detailsData = await detailsResponse.json();

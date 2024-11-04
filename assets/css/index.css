@@ -96,7 +96,7 @@ nav:hover {
     transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for lift effect and shadow */
 }
 .left-link:hover{
-    transform: scale(1.05);
+    transform:translateY(-5px);
     transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for lift effect and shadow */
 }
 
@@ -308,6 +308,27 @@ display: none;
 	color: #aaaaaa;
 	font-family: 'Montserrat', sans-serif;
 }
+
+#search input {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    outline: none;
+    background-color: #1d1d1d; /* Dark background */
+	width: 50%;
+	padding: 20px;
+	border: none;
+	border-radius: 10px;
+	font-size: 16px;
+	color: #ffffff;
+    transition: all 0.3s ease;
+}
+#search input:focus{
+    background-color:rgba(74, 74, 74, 0.2); /* Dark background */
+    box-shadow: 0 2px 10px rgba(74, 74, 74, 0.2);
+}
+#search input::placeholder {
+	color: #aaaaaa;
+	font-family: 'Montserrat', sans-serif;
+}
 .search-bar button {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     font-family: 'Montserrat', sans-serif;
@@ -405,7 +426,6 @@ option{
     user-select:auto;
     box-shadow: 0 2px 10px rgb(61, 61, 61);
     background-color: #333; /* Input background */
-    border: 2px solid #444; /* Darker border */
     height: 300px;
     overflow-y: scroll;
     padding: 10px;
@@ -422,7 +442,6 @@ option{
     outline: none;
     width: 60%;
     padding: 10px;
-    border: 1px solid #444; /* Dark border */
     background-color: #333; /* Input background */
     color: #ffffff; /* Input text color */
     border-radius: 4px; /* Rounded corners */
@@ -431,12 +450,12 @@ option{
 }
 #user-input:hover{
     box-shadow: 0 2px 10px rgb(80, 80, 80);
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 
 }
 #user-input:focus{
     box-shadow: 0 2px 10px rgb(80, 80, 80);
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 
 }
 #send-button {
@@ -452,7 +471,7 @@ option{
 }
 #send-button:hover{
     box-shadow: 0 2px 10px rgb(80, 80, 80);
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 }
 .text {
     font-weight: 700;

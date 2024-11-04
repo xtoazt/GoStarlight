@@ -309,7 +309,7 @@ display: none;
 	font-family: 'Montserrat', sans-serif;
 }
 
-#search input {
+#search {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     outline: none;
     background-color: #1d1d1d; /* Dark background */
@@ -321,11 +321,11 @@ display: none;
 	color: #ffffff;
     transition: all 0.3s ease;
 }
-#search input:focus{
+#search:focus{
     background-color:rgba(74, 74, 74, 0.2); /* Dark background */
     box-shadow: 0 2px 10px rgba(74, 74, 74, 0.2);
 }
-#search input::placeholder {
+#search::placeholder {
 	color: #aaaaaa;
 	font-family: 'Montserrat', sans-serif;
 }
@@ -423,12 +423,14 @@ option{
     padding: 20px; /* Padding inside the chat container */
 }
 #chat-box {
+    border: 2px rgb(96, 96, 96) solid;
     user-select:auto;
     box-shadow: 0 2px 10px rgb(61, 61, 61);
     background-color: #333; /* Input background */
     height: 300px;
     overflow-y: scroll;
-    padding: 10px;
+    padding-top: 30px;
+    padding: 20px;
     flex-grow: 1; /* Allow chat box to grow */
     border-radius: 10px; /* Rounded corners for chat box */
     transition: all 0.5s ease;
@@ -442,6 +444,7 @@ option{
     outline: none;
     width: 60%;
     padding: 10px;
+    border: 2px rgb(99, 99, 99) solid;
     background-color: #333; /* Input background */
     color: #ffffff; /* Input text color */
     border-radius: 4px; /* Rounded corners */
@@ -632,7 +635,7 @@ option{
     flex: 1;
     margin: 10px;
     padding: 20px;
-    background-color: rgb(40, 40, 40);
+    background-color: rgb(35, 35, 35);
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     min-width: 250px; /* Ensures columns have a minimum width */
@@ -659,7 +662,7 @@ option{
 }
 #saveTitleFaviconButton, #saveBgColorButton, #resetBgColorButton, #saveFaviconSelectButton, #saveCloakerButton {
     padding: 10px 15px;
-    background-color: #474747;
+    background-color: #323232;
     color: white;
     border: none;
     border-radius: 4px;

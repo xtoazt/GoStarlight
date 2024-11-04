@@ -20,9 +20,12 @@ function displayResults(items, type) {
         const itemDiv = document.createElement('div');
         itemDiv.classList.add('item');
         itemDiv.innerHTML = `
+        <div class="column>
             <img src="https://image.tmdb.org/t/p/w200${item.poster_path}" alt="${item.title || item.name}">
+            <div class="description">
             <h3>${item.title || item.name}</h3>
-            <p>${type}</p>
+            </div>
+        </div>
         `;
         itemDiv.addEventListener('click', () => {
             if (type === 'TV Show') {

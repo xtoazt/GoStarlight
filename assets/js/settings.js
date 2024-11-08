@@ -83,4 +83,4 @@ document.getElementById('popupToggle').addEventListener('change', function () {
       document.getElementById('logoUrl').value = savedLogoUrl;
       document.querySelector('link[rel="shortcut icon"]').href = savedLogoUrl;
     }
-   
+  })

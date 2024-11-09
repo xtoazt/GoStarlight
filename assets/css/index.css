@@ -82,7 +82,7 @@ nav {
     justify-content: space-between; /* Space items evenly */
     align-items: center; /* Center items vertically */
     white-space: nowrap; /* Prevent wrapping */
-    overflow: hidden;    /* Hide any overflowing content */
+    overflow: scroll;    /* Hide any overflowing content */
     text-overflow: ellipsis; /* Add ellipsis if text overflows */
 }
 
@@ -865,6 +865,5 @@ margin-top: 5.208vw;
 }
 #mainmenu{
     position: relative; /* Position it absolutely */
-    text-align: center; /* Center text inside the div */
-     justify-content:center;
+top: 10%;
 }

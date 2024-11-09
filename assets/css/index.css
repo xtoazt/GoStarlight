@@ -865,8 +865,6 @@ margin-top: 5.208vw;
 }
 #mainmenu{
     position: relative; /* Position it absolutely */
-    top: 50%; /* Move down 50% of the viewport height */
-    left: 0%; /* Move right 50% of the viewport width */
     text-align: center; /* Center text inside the div */
      justify-content:center;
 }

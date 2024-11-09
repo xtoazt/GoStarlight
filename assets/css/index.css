@@ -81,6 +81,9 @@ nav {
     display: flex; /* Use flexbox for layout */
     justify-content: space-between; /* Space items evenly */
     align-items: center; /* Center items vertically */
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden;    /* Hide any overflowing content */
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
 }
 
 nav:hover {
@@ -424,7 +427,7 @@ option{
 }
 #chat-box {
     border: 2px rgb(50, 50, 50) solid;
-    user-select:auto;
+    user-select:text;
     box-shadow: 0 2px 10px rgb(61, 61, 61);
     background-color: #333; /* Input background */
     height: 300px;
@@ -838,7 +841,7 @@ margin-top: 5.208vw;
     border: none;
     height: 50px;
     width: 150px;
-    background-color: #2b2b2be4; /* Dark background */
+    background-color: #272727e4; /* Dark background */
     color: white;
     border-radius: 8px;
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.4);
@@ -852,11 +855,19 @@ margin-top: 5.208vw;
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.4);
     border-radius: 10px;
     padding: 20px;
-    background-color: #1f1f1fe4; /* Dark background */
+    background-color: #282828e4; /* Dark background */
     color: white;
     transition: all 0.3s ease;
 }
-.gamesh111{
-    background-color: #161616e4; /* Dark background */
+.gamesh111:hover{
+    background-color: #262626e4; /* Dark background */
     transform: translateY(-3px);
+}
+#mainmenu{
+    position: absolute; /* Position it absolutely */
+    top: 50%; /* Move down 50% of the viewport height */
+    left: 50%; /* Move right 50% of the viewport width */
+    transform: translate(-50%, -50%); /* Adjust position back by half its width and height */
+    text-align: center; /* Center text inside the div */
+     justify-content:center;
 }

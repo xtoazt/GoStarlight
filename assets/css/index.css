@@ -90,7 +90,10 @@ nav:hover {
     transform: translateX(-50%) translateY(-5px); /* Lift effect */
     box-shadow: 0px 12px 36px rgba(0, 0, 0, 0.5); /* Slightly increase shadow on lift */
 }
-
+    #nav-img{
+        height: 12px;
+        width: 12px;
+    }
 .left-link {
     color: white;
     text-decoration: none;
@@ -865,5 +868,5 @@ margin-top: 5.208vw;
 }
 #mainmenu{
     position: relative; /* Position it absolutely */
-top: 10%;
+top: 8%;
 }

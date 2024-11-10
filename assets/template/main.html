@@ -34,26 +34,341 @@
          <meta name="twitter:image" content="/assets/images/offical/starlight.png">
    
      <style>
-        .content {
-  display: grid;
-margin-right: 20px;
-  grid-template-columns: 2fr 1fr;
-          grid-template-rows: auto;
-}
-.grid1{
-    border-radius: 8px;
-    background-color: rgba(49, 49, 49, 0.045);
-    width: 60%;
-    padding: 20px;
-    height: 500px;
-}
-.grid2{
-    border-radius: 8px;
-    background-color: rgba(49, 49, 49, 0.045);
-    width: 40%;
-    padding: 20px;
-    height: 500px;
-}
+    body{
+        display:flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .content {
+      padding-top: 100px;
+      width: 80%;
+      max-width: 1200px;
+      text-align: left;
+      margin-left: 20px;
+    }
+
+    .title {
+      font-size: 4rem;
+      margin-bottom: 0;
+      color: #f0f0f0;
+      font-family: 'Press Start 2P', sans-serif;
+      margin-left: 10px;
+    }
+
+    .quote {
+      font-size: 1.2rem;
+      margin-top: 0;
+      color: #c0c0c0;
+      font-family: 'Press Start 2P', sans-serif;
+      margin-left: 10px;
+    }
+
+    #playNowButton {
+      background-color: #ffd700;
+      color: #363636;
+      border: none;
+      padding: 25px 50px;
+      font-size: 30px;
+      font-family: 'Press Start 2P', sans-serif;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: -8%;
+      display: block;
+      text-align: center;
+      margin-left: auto;
+      margin-right: 20px;
+    }
+
+    .featured-title {
+      font-size: 2rem;
+      color: #ffd700;
+      font-family: 'Press Start 2P', sans-serif;
+      margin-bottom: 20px;
+    }
+
+    .featured-games-container {
+      position: relative;
+      overflow: hidden;
+      margin-top: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center; /* Align items center */
+      overflow-x: auto; /* Allow horizontal scrolling */
+      scrollbar-width: none; /* Hide scrollbar for Firefox */
+      -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+    }
+
+    .featured-games {
+      display: flex;
+    }
+
+    .featured-games::-webkit-scrollbar { 
+      display: none;
+    }
+
+    .game-card {
+      background-color: #1e1e1e;
+      border: 2px solid #ffd700;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 0 10px;
+      flex: 0 0 auto;
+      width: 180px;
+      height: 300px;
+      text-align: center;
+      font-family: 'Press Start 2P', sans-serif;
+    }
+
+    .game-card img {
+      max-width: 100%;
+      max-height: 150px;
+      border-radius: 8px;
+    }
+
+    .game-card h3 {
+      font-size: 1rem;
+      margin: 10px 0 0 0;
+      color: #f0f0f0;
+    }
+
+    .scroll-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 100;
+      border-radius: 8px;
+    }
+
+    .scroll-button.left {
+      left: 10px;
+    }
+
+    .scroll-button.right {
+      right: 10px;
+    }
+
+    .credits {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 40px;
+    }
+
+    .credit-section {
+      flex: 1;
+      background-color: #1e1e1e;
+      border: 2px solid #ffd700;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      font-family: 'Press Start 2P', sans-serif;
+    }
+
+    .credit-section h2 {
+      font-size: 2rem;
+      color: #ffd700;
+      font-family: 'Press Start 2P', sans-serif;
+      margin-bottom: 20px;
+    }
+
+    .credit-list {
+      display: flex;
+      justify-content: space-around; /* Adjusted to spread items horizontally */
+      align-items: center; /* Center vertically */
+      flex-wrap: wrap; /* Allow items to wrap */
+      margin-top: 10px;
+      font-size: 1.2rem;
+      color: #f0f0f0;
+      line-height: 1.5;
+    }
+
+    .credit-item {
+      margin: 10px;
+    }
+
+    .credit-item h3 {
+      font-size: 1.2rem;
+      color: #ffd700;
+      margin-bottom: 5px;
+    }
+
+    .credit-item p {
+      margin: 0;
+    }
+
+    .credit-item button {
+      background-color: #ffd700;
+      color: #363636;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .more-than-just-games {
+      font-size: 1.5rem;
+      color: #ffd700;
+      font-family: 'Press Start 2P', sans-serif;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    #cookieNotice {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      border-radius: 8px;
+      display: none;
+    }
+
+    #cookieNotice button {
+      background-color: #ffd700;
+      color: #363636;
+      border: none;
+      padding: 8px 16px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .more-than-just-games {
+      font-size: 1.5rem;
+      color: #ffd700;
+      font-family: 'Press Start 2P', sans-serif;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .more-than-just-games .credits {
+      margin-top: 40px;
+      background-color: #1e1e1e;
+      border: 2px solid #ffd700;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      font-family: 'Press Start 2P', sans-serif;
+    }
+
+    .more-than-just-games .credits h2 {
+      font-size: 2rem;
+      color: #ffd700;
+      font-family: 'Press Start 2P', sans-serif;
+      margin-bottom: 20px;
+    }
+
+    .more-than-just-games .credit-list {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      font-size: 1.2rem;
+      color: #f0f0f0;
+      
+      line-height: 1.5;
+    }
+
+    .more-than-just-games .credit-item {
+      margin: 20px;
+    }
+
+    .more-than-just-games .credit-item h3 {
+      font-size: 1.2rem;
+      color: #ffd700;
+      margin-bottom: 5px;
+    }
+
+    .more-than-just-games .credit-item p {
+      margin: 0;
+    }
+
+    .more-than-just-games p {
+      font-size: 1rem;
+      color: #f0f0f0;
+      margin-top: 20px;
+    }
+
+    .more-than-just-games a button {
+      background-color: #ffd700;
+      color: #363636;
+      border: none;
+      padding: 8px 16px;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      font-family: 'Press Start 2P', sans-serif;
+      font-size: 16px;
+      transition: backgrtound-color 0.3s ease-in-out;
+    }
+
+    .more-than-just-games a button:hover {
+      background-color: #c0c0c0;
+    }
+
+    .rounded-image {
+      border: 2px solid transparent;
+      border-color: yellow;
+      border-radius: 5px;
+      height: 90px;
+      width: 720px;
+    }
+
+      .rounded-imagetext {
+      
+    }
+
+    /* Ad container style */
+    #adContainer {
+        width: 600px; /* Set a specific width for the popup */
+        height: auto; /* Allow height to adjust based on content */
+        position: fixed;
+        top: 20%; /* Position down from the top */
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #121212; /* Same background color as the ad */
+        display: none; /* Hide the ad container initially */
+        z-index: 1000; /* Ensure the ad is above other content */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+        padding: 20px; /* Padding around the content */
+        text-align: center; /* Center text */
+    }
+
+    .closeButton {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 24px;
+        color: #fff;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background-color: #333;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .adMessage {
+        color: #fff; /* White text color */
+        font-size: 18px; /* Font size */
+        margin: 10px 0; /* Margin around the message */
+    }
      </style>
          <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-36EM66LHER"></script>
@@ -83,14 +398,120 @@ margin-right: 20px;
             </div>
         </nav>
         <div id="mainmenu">
-           <div class="content">
-            <div class="grid1">
-              <h1>Starlight</h1>
-            </div>
-            <div class="grid2">
-                <h1>Starlight</h1>
-            </div>
-           </div>
+         
+<div class="content">
+    <h1 class="title">DuckHTML</h1>
+    <p class="quote">"Unblocked Games, Free to play!"</p>
+    <button id="playNowButton" onclick="window.location.href='/games.html'"">PLAY NOW</button>
+    <br><br><br><br>
+    <h2 class="featured-title">Featured Games</h2>
+    <div class="featured-games-container">
+      </div>
+      <div class="featured-games">
+        <a href="/play.html?game=slope/index.html&title=Slope" style="text-decoration: none; color: inherit;">
+        <div class="game-card">
+          <img src="https://play-lh.googleusercontent.com/uJn2i9h7KxYQarC_c3K4qH6o7gLtflFnhD_dN14MNkzHJ1NeNFzCL69jpB5mT0vCoQs" alt="Game 1">
+          <h3>Slope</h3>
+          <h4>A endless runner with<br>a ton of endings</h4>
+        </div>
+        </a>
+        <a href="/play.html?game=footballLegends.html&title=FootBall%20Legends" style="text-decoration: none; color: inherit;">
+        <div class="game-card">
+          <img src="https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/7336e7ac04f8c0a88fac674d112ad77c.png" alt="Game 2">
+          <h3>Football Legends</h3>
+          <h4>Fun football-based game<br>win!</h4>
+        </div>
+        </a>
+        <a href="/play.html?game=bitlife.html&title=BitLife" style="text-decoration: none; color: inherit;">
+        <div class="game-card">
+          <img src="https://d.newsweek.com/en/full/1317374/bitlife-ribbons-how-get-all-complete-list-android-ios-cheats-guide-tips-become.jpg?w=1600&h=1600&q=88&f=75befc746fb83a0c568c44ca07bc5e64" alt="Game 3">
+          <h3>Bitlife</h3>
+          <h4>Go through a persons<br>life and explore</h4>
+        </div>
+        </a>
+        <a href="/play?game=dunkshot.html&title=Dunk%20Shot" style="text-decoration: none; color: inherit;">
+        <div class="game-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI_wCDLz_SlN9xf9Avmp4qAsUUwit_TzNfvmCAlFZCsA&s" alt="Game 4">
+          <h3>DuckShot</h3>
+          <h4>Endless shooting game<br>be the best</h4>
+        </div>
+        </a>
+        <a href="/play?game=tinyfishing.html&title=Tiny%20Fishing" style="text-decoration: none; color: inherit;">
+        <div class="game-card">
+          <img src="https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/c8cb366d52fc2a67fb313c344efdbc9e.png" alt="Game 5">
+          <h3>Tiny Fishing</h3>
+          <h4>A simple farming game<br>get fish!</h4>
+          </a>
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <br>
+    <div class="credits">
+      <div class="credit-section">
+        <h2>Featuring Functions</h2>
+        <div class="credit-list">
+          <div class="credit-item">
+            <h3>Games</h3>
+            <p>100+ Handpicked</p>
+            <button style="font-family: VT323; font-size: 1rem"onclick="window.location.href = '/games.html';">Jump to it</button>
+  
+          </div>
+          <div class="credit-item">
+            <h3>Settings</h3>
+            <p>Change Everything</p>
+            <button style="font-family: VT323; font-size: 1rem" onclick="window.location.href = '/settings';">Jump to it</button>
+  
+          </div>
+          <div class="credit-item">
+            <h3>Search</h3>
+            <p>Look up anything</p>
+            <button style="font-family: VT323; font-size: 1rem"  onclick="window.location.href = '/search';">Jump to it</button>
+  
+          
+          </div>
+          <div class="credit-item">
+            <h3></h3>
+            <p></p>
+  
+  
+          </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+    <br><br><br>
+  
+    <div class="more-than-just-games">
+      <h1>Meet Our Team</h1>
+      <div class="credit-list">
+        <div class="credit-item">
+          <h3>Owner</h3>
+          <p>Underi</p>
+        </div>
+        <div class="credit-item">
+          <h3>Developers</h3>
+          <p>Rare, <br>ProudParrot, <br>CodingKitten,<br>Project Neutron</p>
+        </div>
+        <div class="credit-item">
+          <h3>Designers</h3>
+          <p>CheeseNMac</p>
+        </div>
+      </div>
+      <hr><br>
+  <div>
+      <p>Join our Discord community to chat, get updates, and more!</p>
+      <a href="https://discord.gg/WJrVhYbrdQ" target="_blank" rel="noopener noreferrer">
+        <button>Join Discord</button>
+      </a>
+      <br><br>
+    </div>
+      </div>
+    </div>
+    
           </div>
 <script src="/assets/js/cloak.js"></script>
 <script src="/assets/uv/uv/uv.bundle.js" defer></script>

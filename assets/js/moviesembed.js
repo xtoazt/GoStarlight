@@ -4,9 +4,9 @@ const type = urlParams.get('type');
 const season = urlParams.get('season');
 const episode = urlParams.get('episode');
 const mediaFrame = document.querySelector('.iframe');
-const titleElement = document.querySelector('.desc-title');
-const descriptionElement = document.querySelector('.desc-desc');
-const creatorElement = document.querySelector('.desc-creator');
+const titleElement = document.querySelector('.desc-titl');
+const descriptionElement = document.querySelector('.desc-des');
+const creatorElement = document.querySelector('.desc-creato');
 
 async function fetchMediaDetails() {
     try {

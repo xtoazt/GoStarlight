@@ -33,37 +33,24 @@
          <meta name="twitter:description" content=" Starlight is your all-in-one platform for utilities, hacks, games, and proxies, designed to enhance your online experience and unlock limitless possibilities!">
          <meta name="twitter:image" content="/assets/images/offical/starlight.png">
      <style>
-         .content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 80%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    .text-content {
-      text-align: left;
-    }
-
-    .title {
-      font-size: 3rem;
+ 
+ .tex {
+      font-size: 4rem;
       color: #f0f0f0;
       font-family: 'Poppins', sans-serif;
       margin: 20px 0;
     }
 
-    .quote {
-      font-size: 1.25rem;
+    .splas {
+      font-size: 1.5rem;
       color: #c0c0c0;
       font-family: 'Poppins', sans-serif;
       margin-bottom: 40px;
     }
 
-    #playNowButton {
+    #ass {
       color: #363636;
-      background-color: #4a4a4a; /* Gold button background */
+      background-color: #ffd700; /* Gold button background */
       border: none;
       padding: 20px 40px;
       font-size: 24px;
@@ -71,15 +58,21 @@
       border-radius: 8px;
       cursor: pointer;
       text-transform: uppercase;
+      margin-top: 20px;
+      display: inline-block;
       transition: background-color 0.3s, transform 0.3s;
     }
 
     #playNowButton:hover {
-      background-color: #727272; /* Slightly lighter gold on hover */
+      background-color: #ffcc00; /* Slightly lighter gold on hover */
       transform: scale(1.05);
     }
 
-
+    /* Responsiveness */
+    @media (max-width: 768px) {
+      .title {
+        font-size: 2.5rem;
+      }
 
       .quote {
         font-size: 1rem;
@@ -89,6 +82,22 @@
         font-size: 20px;
         padding: 15px 30px;
       }
+    }
+
+    @media (max-width: 480px) {
+      .title {
+        font-size: 2rem;
+      }
+
+      .quote {
+        font-size: 0.9rem;
+      }
+
+      #playNowButton {
+        font-size: 18px;
+        padding: 12px 25px;
+      }
+    }
 
      </style>
      
@@ -123,9 +132,9 @@
             <div class="content">
     <div class="text-content">
       <h1 class="tex">Starlight</h1>
-      <p class="splas"> </p>
+      <p class="splas">asasa</p>
     </div>
-    <button id="playNowButton" onclick="window.location.href='/dashboard.html'">Start now</button>
+    <button id="ass" onclick="window.location.href='/dashboard.html'">Start now</button>
   </div>
           </div>
 <script src="/assets/js/cloak.js"></script>

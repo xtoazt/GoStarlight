@@ -32,74 +32,7 @@
          <meta name="twitter:title" content="Starlight">
          <meta name="twitter:description" content=" Starlight is your all-in-one platform for utilities, hacks, games, and proxies, designed to enhance your online experience and unlock limitless possibilities!">
          <meta name="twitter:image" content="/assets/images/offical/starlight.png">
-     <style>
- 
- .tex {
-      font-size: 4rem;
-      color: #f0f0f0;
-      font-family: 'Poppins', sans-serif;
-      margin: 20px 0;
-    }
-
-    .splas {
-      font-size: 1.5rem;
-      color: #c0c0c0;
-      font-family: 'Poppins', sans-serif;
-      margin-bottom: 40px;
-    }
-
-    #ass {
-      color: #363636;
-      background-color: #ffd700; /* Gold button background */
-      border: none;
-      padding: 20px 40px;
-      font-size: 24px;
-      font-family: 'Press Start 2P', sans-serif;
-      border-radius: 8px;
-      cursor: pointer;
-      text-transform: uppercase;
-      margin-top: 20px;
-      display: inline-block;
-      transition: background-color 0.3s, transform 0.3s;
-    }
-
-    #playNowButton:hover {
-      background-color: #ffcc00; /* Slightly lighter gold on hover */
-      transform: scale(1.05);
-    }
-
-    /* Responsiveness */
-    @media (max-width: 768px) {
-      .title {
-        font-size: 2.5rem;
-      }
-
-      .quote {
-        font-size: 1rem;
-      }
-
-      #playNowButton {
-        font-size: 20px;
-        padding: 15px 30px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .title {
-        font-size: 2rem;
-      }
-
-      .quote {
-        font-size: 0.9rem;
-      }
-
-      #playNowButton {
-        font-size: 18px;
-        padding: 12px 25px;
-      }
-    }
-
-     </style>
+   
      
          <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-36EM66LHER"></script>
@@ -129,8 +62,8 @@
             </div>
         </nav>
         <div id="mainmenu">
-            <center><div class="text">Welcome to Starlight</div></center>
-            <div id="splash">Loading...</div>
+            <center><div class="text" style="font-size: 5em;">Welcome to Starlight</div></center>
+            <div id="splash" style="font-size: 2em;">Loading...</div><br>
             <center><a onclick="window.location.href='/assets/html/dashboard.html'"><button class="button">Start Now</button></a></center>
           </div>
 <script src="/assets/js/cloak.js"></script>
@@ -170,7 +103,7 @@
 
 // Function to change text
 function changeSplashText() {
-    document.getElementById('splas').innerText = splashtext[Math.floor(Math.random() * splashtext.length)];
+    document.getElementById('splash').innerText = splashtext[Math.floor(Math.random() * splashtext.length)];
 }
 
 // Initial call to set the text immediately

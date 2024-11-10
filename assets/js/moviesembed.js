@@ -3,10 +3,10 @@ const tmdbId = urlParams.get('tmdb_id');
 const type = urlParams.get('type');
 const season = urlParams.get('season');
 const episode = urlParams.get('episode');
-const mediaFrame = document.getElementById('iframe');
-const titleElement = document.getElementById('desc-title');
-const descriptionElement = document.getElementById('desc-desc');
-const creatorElement = document.getElementById('desc-creator');
+const mediaFrame = document.querySelector('.iframe');
+const titleElement = document.querySelector('.desc-title');
+const descriptionElement = document.querySelector('.desc-desc');
+const creatorElement = document.querySelector('.desc-creator');
 
 async function fetchMediaDetails() {
     try {

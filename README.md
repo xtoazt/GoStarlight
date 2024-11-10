@@ -1,5 +1,5 @@
-# Starlight: Your Gateway to Unlimited Possibilities!
-Starlight is your all-in-one platform for utilities, hacks, games, and proxies, enhancing your online experience!
+# Starlight: Your All-in-One Platform
+Starlight is an open-source platform offering games, movies, apps, proxies, and useful tools to enhance your online experience.
 ## Features
  - 20+ Games
  - 10+ ROMs

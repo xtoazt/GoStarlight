@@ -858,7 +858,7 @@ margin-top: 5.208vw;
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.4);
     border-radius: 10px;
     padding: 20px;
-    background-color: #282828e4; /* Dark background */
+    background-color: #1d1d1de4; /* Dark background */
     color: white;
     transition: all 0.3s ease;
 }
@@ -869,4 +869,9 @@ margin-top: 5.208vw;
 #mainmenu{
     position: relative; /* Position it absolutely */
 top: 8%;
+}
+hr{
+    color: #797979;
+    size: 3px;
+    border: 1px rgb(201, 201, 201) solid;
 }

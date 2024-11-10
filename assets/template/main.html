@@ -44,32 +44,32 @@
       width: 80%;
       max-width: 1200px;
       text-align: left;
-      margin-left: 20px;
+      margin: 30px;
     }
 
     .title {
       font-size: 4rem;
       margin-bottom: 0;
       color: #f0f0f0;
-      font-family: 'Press Start 2P', sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin-left: 10px;
     }
 
-    .quote {
+    #quote {
       font-size: 1.2rem;
       margin-top: 0;
       color: #c0c0c0;
-      font-family: 'Press Start 2P', sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin-left: 10px;
     }
 
     #playNowButton {
-      background-color: #ffd700;
+      background-color: #ffffff;
       color: #363636;
       border: none;
       padding: 25px 50px;
       font-size: 30px;
-      font-family: 'Press Start 2P', sans-serif;
+      font-family: 'poppins', sans-serif;
       border-radius: 8px;
       cursor: pointer;
       margin-top: -8%;
@@ -81,7 +81,7 @@
 
     .featured-title {
       font-size: 2rem;
-      color: #ffd700;
+      color: #ffffff;
       font-family: 'Press Start 2P', sans-serif;
       margin-bottom: 20px;
     }
@@ -109,7 +109,7 @@
 
     .game-card {
       background-color: #1e1e1e;
-      border: 2px solid #ffd700;
+      border: 2px solid #ffffff;
       border-radius: 8px;
       padding: 20px;
       margin: 0 10px;
@@ -166,7 +166,7 @@
     .credit-section {
       flex: 1;
       background-color: #1e1e1e;
-      border: 2px solid #ffd700;
+      border: 2px solid #ffffff;
       border-radius: 8px;
       padding: 20px;
       text-align: center;
@@ -175,7 +175,7 @@
 
     .credit-section h2 {
       font-size: 2rem;
-      color: #ffd700;
+      color: #ffffff;
       font-family: 'Press Start 2P', sans-serif;
       margin-bottom: 20px;
     }
@@ -197,7 +197,7 @@
 
     .credit-item h3 {
       font-size: 1.2rem;
-      color: #ffd700;
+      color: #ffffff;
       margin-bottom: 5px;
     }
 
@@ -206,7 +206,7 @@
     }
 
     .credit-item button {
-      background-color: #ffd700;
+      background-color: #ffffff;
       color: #363636;
       border: none;
       padding: 8px 16px;
@@ -216,7 +216,7 @@
 
     .more-than-just-games {
       font-size: 1.5rem;
-      color: #ffd700;
+      color: #ffffff;
       font-family: 'Press Start 2P', sans-serif;
       text-align: center;
       margin-top: 20px;
@@ -235,7 +235,7 @@
     }
 
     #cookieNotice button {
-      background-color: #ffd700;
+      background-color: #ffffff;
       color: #363636;
       border: none;
       padding: 8px 16px;
@@ -246,7 +246,7 @@
 
     .more-than-just-games {
       font-size: 1.5rem;
-      color: #ffd700;
+      color: #ffffff;
       font-family: 'Press Start 2P', sans-serif;
       text-align: center;
       margin-top: 20px;
@@ -255,7 +255,7 @@
     .more-than-just-games .credits {
       margin-top: 40px;
       background-color: #1e1e1e;
-      border: 2px solid #ffd700;
+      border: 2px solid #ffffff;
       border-radius: 8px;
       padding: 20px;
       text-align: center;
@@ -264,7 +264,7 @@
 
     .more-than-just-games .credits h2 {
       font-size: 2rem;
-      color: #ffd700;
+      color: #ffffff;
       font-family: 'Press Start 2P', sans-serif;
       margin-bottom: 20px;
     }
@@ -287,7 +287,7 @@
 
     .more-than-just-games .credit-item h3 {
       font-size: 1.2rem;
-      color: #ffd700;
+      color: #ffffff;
       margin-bottom: 5px;
     }
 
@@ -321,16 +321,13 @@
 
     .rounded-image {
       border: 2px solid transparent;
-      border-color: yellow;
+      border-color: rgb(255, 255, 255);
       border-radius: 5px;
       height: 90px;
       width: 720px;
     }
 
-      .rounded-imagetext {
-      
-    }
-
+    
     /* Ad container style */
     #adContainer {
         width: 600px; /* Set a specific width for the popup */
@@ -400,8 +397,8 @@
         <div id="mainmenu">
          
 <div class="content">
-    <h1 class="title">DuckHTML</h1>
-    <p class="quote">"Unblocked Games, Free to play!"</p>
+    <h1 class="title">Starlight</h1>
+    <p id="quote">Loading...</p>
     <button id="playNowButton" onclick="window.location.href='/games.html'"">PLAY NOW</button>
     <br><br><br><br>
     <h2 class="featured-title">Featured Games</h2>
@@ -447,7 +444,7 @@
       </div>
       </div>
     </div>
-    <br>
+    <br><br>
     <div class="credits">
       <div class="credit-section">
         <h2>Featuring Functions</h2>
@@ -550,7 +547,7 @@
 
 // Function to change text
 function changeSplashText() {
-    document.getElementById('splash').innerText = splashtext[Math.floor(Math.random() * splashtext.length)];
+    document.getElementById('quote').innerText = splashtext[Math.floor(Math.random() * splashtext.length)];
 }
 
 // Initial call to set the text immediately

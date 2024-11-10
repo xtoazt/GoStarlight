@@ -33,45 +33,62 @@
          <meta name="twitter:description" content=" Starlight is your all-in-one platform for utilities, hacks, games, and proxies, designed to enhance your online experience and unlock limitless possibilities!">
          <meta name="twitter:image" content="/assets/images/offical/starlight.png">
      <style>
-         .mainmenu {
-      padding-top: 100px;
+         .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       width: 80%;
       max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .text-content {
       text-align: left;
-      margin-left: 20px;
     }
 
-    .text {
-      font-size: 4rem;
-      margin-bottom: 0;
+    .title {
+      font-size: 3rem;
       color: #f0f0f0;
-      font-family: 'Press Start 2P', sans-serif;
-      margin-left: 10px;
+      font-family: 'Poppins', sans-serif;
+      margin: 20px 0;
     }
 
-    #splash {
-      font-size: 1.2rem;
-      margin-top: 0;
+    .quote {
+      font-size: 1.25rem;
       color: #c0c0c0;
-      font-family: 'Press Start 2P', sans-serif;
-      margin-left: 10px;
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 40px;
     }
 
-    #ass {
-      background-color: #ffd700;
+    #playNowButton {
       color: #363636;
+      background-color: #4a4a4a; /* Gold button background */
       border: none;
-      padding: 25px 50px;
-      font-size: 30px;
+      padding: 20px 40px;
+      font-size: 24px;
       font-family: 'Press Start 2P', sans-serif;
       border-radius: 8px;
       cursor: pointer;
-      margin-top: -8%;
-      display: block;
-      text-align: center;
-      margin-left: auto;
-      margin-right: 20px;
+      text-transform: uppercase;
+      transition: background-color 0.3s, transform 0.3s;
     }
+
+    #playNowButton:hover {
+      background-color: #727272; /* Slightly lighter gold on hover */
+      transform: scale(1.05);
+    }
+
+
+
+      .quote {
+        font-size: 1rem;
+      }
+
+      #playNowButton {
+        font-size: 20px;
+        padding: 15px 30px;
+      }
 
      </style>
      
@@ -103,9 +120,13 @@
             </div>
         </nav>
         <div id="mainmenu">
-            <center><div class="text">Welcome to Starlight</div></center>
-            <div id="splash">Loading...</div>
-<button id="ass">play now</button>
+            <div class="content">
+    <div class="text-content">
+      <h1 class="tex">Starlight</h1>
+      <p class="splas"> </p>
+    </div>
+    <button id="playNowButton" onclick="window.location.href='/dashboard.html'">Start now</button>
+  </div>
           </div>
 <script src="/assets/js/cloak.js"></script>
 <script src="/assets/uv/uv/uv.bundle.js" defer></script>
@@ -144,7 +165,7 @@
 
 // Function to change text
 function changeSplashText() {
-    document.getElementById('splash').innerText = splashtext[Math.floor(Math.random() * splashtext.length)];
+    document.getElementById('splas').innerText = splashtext[Math.floor(Math.random() * splashtext.length)];
 }
 
 // Initial call to set the text immediately

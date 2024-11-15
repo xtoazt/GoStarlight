@@ -70,7 +70,7 @@ nav {
     top: 20px; /* Add some space from the top */
     left: 50%; /* Center the navbar horizontally */
     transform: translateX(-50%); /* Offset the navbar by 50% of its own width */
-    width: 80%; 
+    width: 70%; 
     padding: 20px; /* Padding for the navbar */
     background-color: #1b1b1be4; /* Dark background */
     color: white; /* Text color */
@@ -82,7 +82,7 @@ nav {
     justify-content: space-between; /* Space items evenly */
     align-items: center; /* Center items vertically */
     white-space: nowrap; /* Prevent wrapping */
-    width: fit-content;
+    
     text-overflow: ellipsis; /* Add ellipsis if text overflows */
 }
 
@@ -724,7 +724,7 @@ option{
     text-align: center;
   }
   #mom{
-    color: white;
+    color: rgb(107, 107, 107);
     box-shadow: 0 0 10px  rgb(27, 27, 27);
     border: none;
     background-color: rgb(65, 65, 65);

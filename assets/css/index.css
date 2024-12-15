@@ -82,7 +82,7 @@ nav {
     justify-content: space-between; /* Space items evenly */
     align-items: center; /* Center items vertically */
     white-space: nowrap; /* Prevent wrapping */
-    
+    overflow: scroll;
     text-overflow: ellipsis; /* Add ellipsis if text overflows */
 }
 

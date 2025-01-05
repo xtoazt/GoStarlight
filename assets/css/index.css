@@ -180,7 +180,7 @@ border: none;
 .button{
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    box-shadow: 0 0 10px rgb(40, 40, 40);
+    box-shadow: 0 0 10px rgb(11, 11, 11);
     background-color: #202020;
     border: none;
     border-radius: 10px;
@@ -201,13 +201,13 @@ border: none;
     border: none;
     border-radius: 5px;
     color: white;
-    box-shadow: 0px 12px 36px rgba(59, 59, 59, 0.5); /* Slightly increase shadow on lift */
+    box-shadow: 0px 12px 36px rgba(9, 9, 9, 0.5); /* Slightly increase shadow on lift */
     transition: transform 0.3s, box-shadow 0.3s; 
     padding: 15px 20px; 
     }
     #type:hover{
         transform: translateY(-3px);     
-        box-shadow: 0px 12px 36px rgba(25, 25, 25, 0.5); /* Slightly increase shadow on lift */
+        box-shadow: 0px 12px 36px rgba(9, 9, 9, 0.5); /* Slightly increase shadow on lift */
     }
     .row {
         margin: 30px;
@@ -876,7 +876,9 @@ hr{
     border: 1px rgb(201, 201, 201) solid;
 }
 .news-card {
-    background-color: #9b59b6; /* Purple background for news cards */
+    text-align: center;
+    width: 80%;
+    background-color: #262626; /* Purple background for news cards */
     border-radius: 12px;
     padding: 20px;
     margin-bottom: 20px;
@@ -902,14 +904,14 @@ hr{
 .news-card .read-more {
     display: inline-block;
     margin-top: 10px;
-    color: #f39c12;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
     transition: color 1s, transform 1s;
 }
 
 .news-card .read-more:hover {
-    color: #ff79c6;
+    color: #afafaf;
     text-decoration: underline;
     transform: scale(1.1);
 }

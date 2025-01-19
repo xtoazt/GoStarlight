@@ -46,6 +46,16 @@
     </head>
     <body>
    
+<div class="overlay" id="alertOverlay">
+  <div class="alert-box">
+      <h2>Maintenance Alert</h2>
+      <p>Attention: This site may have security issues. Please use it at your own risk.</p>
+      <div class="button-container">
+          <button class="proceed" onclick="dismissAlert()">Proceed</button>
+          <button class="do-not-proceed" onclick="dismissAlert()">Do Not Proceed</button>
+      </div>
+  </div>
+</div>
 <script src="/assets/js/global.js"></script>
 <script src="/assets/js/eruda.js"></script>
 <script>eruda.init();</script>
@@ -80,7 +90,7 @@
            <a href="/assets/html/dashboard.html"><button class="button">Dashboard</button></a>&nbsp;&nbsp;&nbsp;
            <a href="/assets/html/premium.html"><button class="button">Premium</button></a>&nbsp;&nbsp;&nbsp;
            <a href="https://discord.gg/WSUy3dHFRh"><button class="button">Join Our Discord</button></a>&nbsp;&nbsp;&nbsp;
-           <a id="openScriptButton"><button class="button">Cloak</button></a>&nbsp;
+           <a href="/assets/html/forum.html"><button class="button">Forums</button></a>&nbsp;&nbsp;&nbsp;
           </center>
           <br>
           <br>

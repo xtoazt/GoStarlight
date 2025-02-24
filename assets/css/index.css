@@ -707,6 +707,11 @@ option{
     border-radius: 20px;
     height: 80px;
     width:330px;
+    border: #818181 3px solid;
+    transition: all 0.5s ease;
+  }
+  #emailInput:hover{
+    transform: translateY(-5px);
   }
   #messageInput{
     border-radius: 20px;
@@ -718,14 +723,19 @@ option{
     box-shadow: 0 0 10px   rgb(20, 20, 20);
     border: none;
     background-color: rgb(65, 65, 65);
+    border: #818181 3px solid;
+    transition: all 0.5s ease;
+  }
+  #messageInput:hover{
+    transform: translateY(-5px);
   }
   #forms{
     text-align: center;
   }
   #mom{
-    color: rgb(100, 100, 100);
+    color: rgb(138, 138, 138);
     box-shadow: 0 0 10px  rgb(27, 27, 27);
-    border: none;
+    border: #818181 3px solid;
     background-color: rgb(65, 65, 65);
     border-radius: 10px;
     height:30px;

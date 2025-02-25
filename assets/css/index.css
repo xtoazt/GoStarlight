@@ -707,7 +707,7 @@ option{
     border-radius: 20px;
     height: 80px;
     width:330px;
-    border: #818181 3px solid;
+    border: #444343 3px solid;
     transition: all 0.5s ease;
   }
   #emailInput:hover{
@@ -720,10 +720,10 @@ option{
     outline: none;
     color: white;
     padding: 20px;
-    box-shadow: 0 0 10px   rgb(20, 20, 20);
+    box-shadow: 0 0 10px   rgb(46, 46, 46);
     border: none;
     background-color: rgb(65, 65, 65);
-    border: #818181 3px solid;
+    border: #303030 3px solid;
     transition: all 0.5s ease;
   }
   #messageInput:hover{
@@ -733,7 +733,7 @@ option{
     text-align: center;
   }
   #mom{
-    color: rgb(138, 138, 138);
+    color: rgb(45, 45, 45);
     box-shadow: 0 0 10px  rgb(27, 27, 27);
     border: #818181 3px solid;
     background-color: rgb(65, 65, 65);

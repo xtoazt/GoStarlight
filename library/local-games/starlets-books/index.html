@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Horror Game with Sprint</title>
+    <style>
+        body { margin: 0; overflow: hidden; background-color: #111; font-family: Arial, sans-serif; }
+        canvas { display: block; cursor: none; }
+        /* Pixelated effect */
+        canvas {
+            image-rendering: pixelated;
+            -ms-interpolation-mode: nearest-neighbor;
+        }
+        #ui {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            color: white;
+            font-size: 18px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+        #startMenu {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            display: block;
+        }
+        #startMenu button {
+            background-color: #444;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        #startMenu button:hover {
+            background-color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="gameCanvas"></canvas>
+    <div id="ui">
+        <div>Points: <span id="pointCount">0</span></div>
+        <div>Highscore: <span id="highscore">0</span></div>
+    </div>
+    <div id="startMenu">
+        <div>Welcome to Starlets Books!</div>
+        <button id="startButton">Start Game</button>
+    </div>
+
+    <script>
+        // Set up basic game variables
+        let canvas = document.getElementById('gameCanvas');
+        let ctx = canvas.getContext('2d');
+        let player = { x: canvas.width / 2, y: canvas.height / 2, size: 40, speed: 5, color: 'blue' }; // Player color is blue
+        let monster = { x: Math.random() * 600 + 100, y: Math.random() * 400 + 100, size: 50, color: 'red', speed: 2 }; // Monster color is red
+        let books = [];
+        let points = 0;
+        let moveLeft = false, moveRight = false, moveUp = false, moveDown = false;
+        let sprinting = false;  // Track if player is sprinting
+        let gameStarted = false;
+        let gameOver = false;
+
+        // Set up canvas size and update window size
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        // Load highscore from localStorage
+        let highscore = localStorage.getItem('highscore') || 0;
+        document.getElementById('highscore').textContent = highscore;
+
+        // Handle key press events
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'w') moveUp = true;
+            if (event.key === 's') moveDown = true;
+            if (event.key === 'a') moveLeft = true;
+            if (event.key === 'd') moveRight = true;
+            if (event.key === 'Shift') sprinting = true;  // Sprinting when Shift is pressed
+        });
+        document.addEventListener('keyup', (event) => {
+            if (event.key === 'w') moveUp = false;
+            if (event.key === 's') moveDown = false;
+            if (event.key === 'a') moveLeft = false;
+            if (event.key === 'd') moveRight = false;
+            if (event.key === 'Shift') sprinting = false;  // Stop sprinting when Shift is released
+        });
+
+        // Create 5 books at random locations within canvas boundaries
+        function createBooks() {
+            books = [];
+            for (let i = 0; i < 5; i++) {
+                books.push({
+                    x: Math.random() * (canvas.width - 20), // Ensure book spawns within canvas width
+                    y: Math.random() * (canvas.height - 20), // Ensure book spawns within canvas height
+                    size: 20,
+                    color: 'yellow' // Book color is yellow
+                });
+            }
+        }
+
+        // Draw the player, monster, and books
+        function drawGame() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);  // Clear the canvas
+
+            // Draw the player
+            ctx.fillStyle = player.color;  // Set color for player
+            ctx.fillRect(player.x, player.y, player.size, player.size);
+
+            // Draw the monster
+            ctx.fillStyle = monster.color;  // Set color for monster
+            ctx.fillRect(monster.x, monster.y, monster.size, monster.size);
+
+            // Draw the books
+            books.forEach((book) => {
+                ctx.fillStyle = book.color;  // Set color for books
+                ctx.fillRect(book.x, book.y, book.size, book.size);
+            });
+
+            // Draw the screen border
+            ctx.strokeStyle = 'white';
+            ctx.lineWidth = 5;
+            ctx.strokeRect(0, 0, canvas.width, canvas.height);
+
+            // Update points UI
+            document.getElementById('pointCount').textContent = points;
+        }
+
+        // Check if the player collides with walls (currently not using walls)
+        function checkWallCollision(x, y, size) {
+            if (x < 0 || x + size > canvas.width || y < 0 || y + size > canvas.height) {
+                return true;  // Collides with the edge of the canvas
+            }
+            return false; // No collision
+        }
+
+        // Monster AI: Move towards player and slide off walls
+        function moveMonster() {
+            let dx = player.x - monster.x;
+            let dy = player.y - monster.y;
+            let distance = Math.sqrt(dx * dx + dy * dy);
+            if (distance > 2) {
+                // Calculate monster's movement direction
+                let moveX = dx / distance * monster.speed;
+                let moveY = dy / distance * monster.speed;
+
+                // Move the monster
+                monster.x += moveX;
+                monster.y += moveY;
+            }
+        }
+
+        // Update game state
+        function updateGame() {
+            if (!gameStarted) return;  // Don't update game if it hasn't started
+            if (gameOver) return;  // Stop the game if it's over
+
+            // Adjust player speed for sprinting
+            let currentSpeed = sprinting ? player.speed * 2 : player.speed;  // Double speed when sprinting
+
+            // Player movement
+            if (moveLeft && !checkWallCollision(player.x - currentSpeed, player.y, player.size)) player.x -= currentSpeed;
+            if (moveRight && !checkWallCollision(player.x + currentSpeed, player.y, player.size)) player.x += currentSpeed;
+            if (moveUp && !checkWallCollision(player.x, player.y - currentSpeed, player.size)) player.y -= currentSpeed;
+            if (moveDown && !checkWallCollision(player.x, player.y + currentSpeed, player.size)) player.y += currentSpeed;
+
+            // Monster movement
+            moveMonster();
+
+            // Check collision with books
+            books.forEach((book, index) => {
+                if (player.x < book.x + book.size &&
+                    player.x + player.size > book.x &&
+                    player.y < book.y + book.size &&
+                    player.y + player.size > book.y) {
+                    books.splice(index, 1);  // Remove book
+                    points += 5;  // Increase points by 5
+
+                    // Check if all books are collected
+                    if (books.length === 0) {
+                        createBooks();  // Create new books after collection
+                    }
+                }
+            });
+
+            // Check collision with monster (game over with jumpscare)
+            if (player.x < monster.x + monster.size &&
+                player.x + player.size > monster.x &&
+                player.y < monster.y + monster.size &&
+                player.y + player.size > monster.y) {
+                    gameOver = true;
+                    showJumpscare();
+                    resetGame();
+            }
+
+            // Draw everything
+            drawGame();
+
+            // Request the next animation frame
+            requestAnimationFrame(updateGame);
+        }
+
+        // Show jumpscare when the player is caught
+        function showJumpscare() {
+            // Flash the screen with a scary color (e.g., red) for effect
+            document.body.style.backgroundColor = 'red';
+            setTimeout(() => {
+                document.body.style.backgroundColor = '#111'; // Reset background color
+            }, 200);
+
+            // Optionally, play a scary sound (ensure you have a sound file)
+            let jumpscareSound = new Audio('https://www.soundjay.com/button/beep-07.wav'); // Example beep sound
+            jumpscareSound.play();
+
+            // Add a brief delay before resetting the game
+            setTimeout(() => {
+                alert("Game Over! The monster caught you.");
+            }, 500);
+        }
+
+        // Reset game after game over or all books collected
+        function resetGame() {
+            setTimeout(() => {
+                // Save highscore
+                if (points > highscore) {
+                    highscore = points;
+                    localStorage.setItem('highscore', highscore);
+                    document.getElementById('highscore').textContent = highscore;
+                }
+
+                // Reset game variables
+                player.x = canvas.width / 2;
+                player.y = canvas.height / 2;
+                points = 0;
+                createBooks(); // Start with 5 books
+                showStartMenu(); // Show start menu again
+                gameOver = false; // Reset game over state
+            }, 1000);
+        }
+
+        // Start the game
+        function startGame() {
+            gameStarted = true;
+            document.getElementById('startMenu').style.display = 'none'; // Hide start menu
+            createBooks();  // Initially create 5 books
+            updateGame();
+        }
+
+        // Set up the start button
+        document.getElementById('startButton').addEventListener('click', startGame);
+
+        // Show start menu initially
+        function showStartMenu() {
+            document.getElementById('startMenu').style.display = 'block';
+        }
+
+        showStartMenu(); // Show the start menu initially
+
+    </script>
+
+</body>
+</html>
+
+   

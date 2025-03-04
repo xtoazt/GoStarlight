@@ -723,7 +723,7 @@ option{
     box-shadow: 0 0 10px   rgb(46, 46, 46);
     border: none;
     background-color: rgb(65, 65, 65);
-    border: #303030 3px solid;
+    border: #444343 3px solid;
     transition: all 0.5s ease;
   }
   #messageInput:hover{
@@ -735,7 +735,7 @@ option{
   #mom{
     color: rgb(45, 45, 45);
     box-shadow: 0 0 10px  rgb(27, 27, 27);
-    border: #818181 3px solid;
+    border: #444343 3px solid;
     background-color: rgb(65, 65, 65);
     border-radius: 10px;
     height:30px;

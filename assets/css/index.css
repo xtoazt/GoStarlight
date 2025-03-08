@@ -12,7 +12,7 @@ canvas {
 body {
     user-select: none;
     margin: 0;
-    background: linear-gradient(-45deg, #1c1c1c, #1a1a1a);
+    background: linear-gradient(45deg, purple , #d3d3d3 ); /* Purple and light grey */
     height: 100vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -860,7 +860,7 @@ margin-top: 5.208vw;
     transition: all 0.3s ease;
 }
 .browse-games:hover{
-    transform: scale(1.05);
+    transform: scaleY(-5px);
     background-color: #222222;
 }
 .gamesh111{

@@ -84,3 +84,32 @@ document.getElementById('popupToggle').addEventListener('change', function () {
       document.querySelector('link[rel="shortcut icon"]').href = savedLogoUrl;
     }
   })
+
+  const gradientSelector = document.getElementById('gradientSelector');
+  const resetButton = document.getElementById('resetButton');
+
+  // Load the saved gradient from local storage
+  const savedGradient = localStorage.getItem('backgroundGradient');
+  if (savedGradient) {
+      document.body.style.background = savedGradient;
+      gradientSelector.value = savedGradient; // Set the select to the saved value
+  } else {
+      // Set default gradient if no saved gradient
+      const defaultGradient = 'linear-gradient(to right, #ffffff, #f0f0f0)';
+      document.body.style.background = defaultGradient;
+  }
+
+  // Change the background and save the selected gradient
+  gradientSelector.addEventListener('change', function() {
+      const selectedGradient = gradientSelector.value;
+      document.body.style.background = selectedGradient;
+      localStorage.setItem('backgroundGradient', selectedGradient);
+  });
+
+  // Reset to default gradient
+  resetButton.addEventListener('click', function() {
+      const defaultGradient = 'linear-gradient(to right, #ffffff, #f0f0f0)';
+      document.body.style.background = defaultGradient;
+      localStorage.removeItem('backgroundGradient'); // Remove saved gradient
+      gradientSelector.selectedIndex = -1; // Reset the dropdown
+  });

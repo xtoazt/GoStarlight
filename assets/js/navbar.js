@@ -4,7 +4,7 @@
 
   // Create the left link
   const leftLink = document.createElement('a');
-  leftLink.href = "/assets/html/index.html";
+  leftLink.href = "/index.html";
   leftLink.className = "left-link";
   leftLink.textContent = "Starlight";
   navbar.appendChild(leftLink);

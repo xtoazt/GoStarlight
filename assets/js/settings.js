@@ -1,8 +1,12 @@
 const docTitleInput = document.getElementById('docTitleInput');
 const faviconInput = document.getElementById('faviconInput');
 const saveTitleFaviconButton = document.getElementById('saveTitleFaviconButton');
+const faviconSelectInput = document.getElementById('faviconSelectInput');
+const saveFaviconSelectButton = document.getElementById('saveFaviconSelectButton');
+const gradientSelector = document.getElementById('gradientSelector');
+const resetButton = document.getElementById('resetButton');
 
-document.addEventListener('DOMContentLoaded', () => {
+function onDocumentLoad() {
     const savedTitle = localStorage.getItem('docTitle');
     const savedFavicon = localStorage.getItem('favicon');
     const savedBgColor = localStorage.getItem('bgColor');
@@ -24,9 +28,39 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.backgroundColor = savedBgColor;
         document.getElementById('bgColorInput').value = savedBgColor;
     }
-});
 
-saveTitleFaviconButton.addEventListener('click', () => {
+    const savedPanicKey = localStorage.getItem('panicKey');
+    const savedPanicUrl = localStorage.getItem('panicUrl');
+    const savedCloakTitle = localStorage.getItem('cloakTitle');
+    const savedLogoUrl = localStorage.getItem('logoUrl');
+    const popupEnabled = localStorage.getItem('popupEnabled') === 'true';
+
+    if (savedPanicKey) {
+        document.getElementById('panicKey').value = savedPanicKey;
+    }
+    if (savedPanicUrl) {
+        document.getElementById('panicUrl').value = savedPanicUrl;
+    }
+    if (savedCloakTitle) {
+        document.getElementById('title').value = savedCloakTitle;
+        window.top.document.title = savedCloakTitle;
+    }
+    if (savedLogoUrl) {
+        document.getElementById('logoUrl').value = savedLogoUrl;
+        document.querySelector('link[rel="shortcut icon"]').href = savedLogoUrl;
+    }
+
+    const savedGradient = localStorage.getItem('backgroundGradient');
+    if (savedGradient) {
+        document.body.style.background = savedGradient;
+        gradientSelector.value = savedGradient;
+    } else {
+        const defaultGradient = 'linear-gradient(to right, #ffffff, #f0f0f0)';
+        document.body.style.background = defaultGradient;
+    }
+}
+
+function onSaveTitleFavicon() {
     const newTitle = docTitleInput.value;
     const newFavicon = faviconInput.value;
     document.title = newTitle;
@@ -38,12 +72,9 @@ saveTitleFaviconButton.addEventListener('click', () => {
 
     localStorage.setItem('docTitle', newTitle);
     localStorage.setItem('favicon', newFavicon);
-});
+}
 
-const faviconSelectInput = document.getElementById('faviconSelectInput');
-const saveFaviconSelectButton = document.getElementById('saveFaviconSelectButton');
-
-saveFaviconSelectButton.addEventListener('click', () => {
+function onSaveFaviconSelect() {
     const selectedFavicon = faviconSelectInput.value;
     if (selectedFavicon) {
         const link = document.createElement('link');
@@ -56,60 +87,32 @@ saveFaviconSelectButton.addEventListener('click', () => {
     } else {
         alert("Please select a favicon.");
     }
-});
+}
 
-document.getElementById('popupToggle').addEventListener('change', function () {
-    localStorage.setItem('popupEnabled', this.checked);
-  });
+function onPopupToggleChange() {
+    const popupEnabled = this.checked;
+    localStorage.setItem('popupEnabled', popupEnabled);
+}
 
-  document.addEventListener('DOMContentLoaded', function () {
-    const savedPanicKey = localStorage.getItem('panicKey');
-    const savedPanicUrl = localStorage.getItem('panicUrl');
-    const savedCloakTitle = localStorage.getItem('cloakTitle');
-    const savedLogoUrl = localStorage.getItem('logoUrl');
-    const popupEnabled = localStorage.getItem('popupEnabled') === 'true';
+function onGradientChange() {
+    const selectedGradient = gradientSelector.value;
+    document.body.style.background = selectedGradient;
+    localStorage.setItem('backgroundGradient', selectedGradient);
+}
 
-    if (savedPanicKey) {
-      document.getElementById('panicKey').value = savedPanicKey;
-    }
-    if (savedPanicUrl) {
-      document.getElementById('panicUrl').value = savedPanicUrl;
-    }
-    if (savedCloakTitle) {
-      document.getElementById('title').value = savedCloakTitle;
-      window.top.document.title = savedCloakTitle;
-    }
-    if (savedLogoUrl) {
-      document.getElementById('logoUrl').value = savedLogoUrl;
-      document.querySelector('link[rel="shortcut icon"]').href = savedLogoUrl;
-    }
-  })
+function onResetButtonClick() {
+    const defaultGradient = 'linear-gradient(to right, #ffffff, #f0f0f0)';
+    document.body.style.background = defaultGradient;
+    localStorage.removeItem('backgroundGradient');
+    gradientSelector.selectedIndex = -1;
+}
 
-  const gradientSelector = document.getElementById('gradientSelector');
-  const resetButton = document.getElementById('resetButton');
+// Attach `onclick` handlers and other event handlers
+saveTitleFaviconButton.onclick = onSaveTitleFavicon;
+saveFaviconSelectButton.onclick = onSaveFaviconSelect;
+document.getElementById('popupToggle').onclick = onPopupToggleChange;
+gradientSelector.onclick = onGradientChange;
+resetButton.onclick = onResetButtonClick;
 
-  // Load the saved gradient from local storage
-  const savedGradient = localStorage.getItem('backgroundGradient');
-  if (savedGradient) {
-      document.body.style.background = savedGradient;
-      gradientSelector.value = savedGradient; // Set the select to the saved value
-  } else {
-      // Set default gradient if no saved gradient
-      const defaultGradient = 'linear-gradient(to right, #ffffff, #f0f0f0)';
-      document.body.style.background = defaultGradient;
-  }
-
-  // Change the background and save the selected gradient
-  gradientSelector.addEventListener('change', function() {
-      const selectedGradient = gradientSelector.value;
-      document.body.style.background = selectedGradient;
-      localStorage.setItem('backgroundGradient', selectedGradient);
-  });
-
-  // Reset to default gradient
-  resetButton.addEventListener('click', function() {
-      const defaultGradient = 'linear-gradient(to right, #ffffff, #f0f0f0)';
-      document.body.style.background = defaultGradient;
-      localStorage.removeItem('backgroundGradient'); // Remove saved gradient
-      gradientSelector.selectedIndex = -1; // Reset the dropdown
-  });
+// Load settings on document load
+window.onload = onDocumentLoad;
